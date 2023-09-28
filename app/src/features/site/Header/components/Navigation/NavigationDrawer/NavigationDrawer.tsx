@@ -11,7 +11,6 @@ import {
   AppDrawer,
   AppDropdown,
   AppMenuItem,
-  AppButton,
   CloseButton,
 } from '@benbeck764/react-components';
 
@@ -24,6 +23,7 @@ export const NavigationDrawer: FC<NavigationDrawerProps> = (
   props: NavigationDrawerProps
 ) => {
   const { pathname } = useLocation();
+  const [open, setOpen] = useState<boolean>(false);
   const [forcedToggleState, setForcedToggleState] = useState<boolean | undefined>(
     undefined
   );
@@ -31,23 +31,31 @@ export const NavigationDrawer: FC<NavigationDrawerProps> = (
   const handleClick = (option: NavMenuOptions) => {
     if (option.disabled) return;
     setForcedToggleState(false);
+    setOpen(false);
     props?.onClickOption(option);
   };
 
   const handleButtonVariantClick = (config: NavMenuConfig) => () => {
     if (config.disabled) return;
     setForcedToggleState(false);
+    setOpen(false);
     props.onClickOption(config);
   };
 
   return (
     <AppDrawer
       mode="panel"
-      displayAboveHeader={true}
-      closeOnSelect={true}
+      displayAboveHeader
+      closeOnSelect
       forcedToggleState={forcedToggleState}
-      drawerProps={{ anchor: 'right' }}
-      onDrawerOpen={() => setForcedToggleState(undefined)}
+      drawerProps={{
+        anchor: 'right',
+        onClose: () => setOpen(false),
+      }}
+      onDrawerOpen={() => {
+        setForcedToggleState(undefined);
+        setOpen(true);
+      }}
       panelSx={{
         p: 0,
         width: 200,
@@ -65,15 +73,31 @@ export const NavigationDrawer: FC<NavigationDrawerProps> = (
           '&:focus': {
             color: (theme) => `${theme.palette.common.white} !important`,
           },
+          transition: `transform 0.25s cubic-bezier(${
+            open ? '0.215, 0.61, 0.355, 1' : '0.55, 0.055, 0.675, 0.19'
+          }) ${open ? '0.12s' : '0s'}`,
+          transform: `rotate(${open ? '225deg' : '0deg'})`,
         },
         children: <MenuIcon fontSize="large" />,
       }}
     >
       <Stack direction="column">
         <Box display="flex" justifyContent="flex-end" pr={2} pt={0.5}>
-          <CloseButton fontSize="large" onClick={() => setForcedToggleState(false)} />
+          <CloseButton
+            fontSize="large"
+            onClick={() => {
+              setForcedToggleState(false);
+              setOpen(false);
+            }}
+            sx={{
+              transition: `transform 0.25s cubic-bezier(${
+                open ? '0.215, 0.61, 0.355, 1' : '0.55, 0.055, 0.675, 0.19'
+              }) ${open ? '0.12s' : '0s'}`,
+              transform: `rotate(${open ? '0deg' : '225deg'})`,
+            }}
+          />
         </Box>
-        <Box sx={{ overflowY: 'scroll' }}>
+        <Box sx={{ overflowY: 'scroll', pl: 1.5, py: 1 }}>
           {props.navigationConfig.map((config: NavMenuConfig, index: number) => (
             <Fragment key={index}>
               {config.variant === NavigationOptionVariant.Menu ? (
@@ -140,9 +164,9 @@ export const NavigationDrawer: FC<NavigationDrawerProps> = (
                     {config.menuItems?.map((option: NavMenuOptions, index: number) => (
                       <AppMenuItem
                         key={index}
-                        onSelect={() => handleClick(option)}
                         sx={{ pl: 4 }}
                         disabled={option.disabled}
+                        onSelect={() => handleClick(option)}
                       >
                         <Typography
                           variant="mobileParagraphBold"
@@ -174,17 +198,23 @@ export const NavigationDrawer: FC<NavigationDrawerProps> = (
                   </Box>
                 </AppDropdown>
               ) : (
-                <Box sx={{ width: '100%' }}>
-                  <AppButton
-                    sx={{ pl: 2, py: 1, justifyContent: 'flex-start' }}
-                    onClick={handleButtonVariantClick(config)}
-                    fullWidth
-                  >
-                    <Typography variant="mobileParagraphBold" color="primary">
-                      {config.label}
-                    </Typography>
-                  </AppButton>
-                </Box>
+                <AppMenuItem
+                  sx={{
+                    '&:hover': {
+                      backgroundColor: (theme) => theme.palette.coolGrey[900],
+                    },
+                    '&:focus': {
+                      backgroundColor: (theme) => theme.palette.coolGrey[900],
+                      outline: 'none',
+                    },
+                    width: '100%',
+                  }}
+                  onSelect={handleButtonVariantClick(config)}
+                >
+                  <Typography variant="mobileParagraphBold" color="primary">
+                    {config.label}
+                  </Typography>
+                </AppMenuItem>
               )}
             </Fragment>
           ))}

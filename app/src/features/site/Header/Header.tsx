@@ -4,7 +4,7 @@ import {
   StyledHeaderContainer,
   StyledHeaderWrapper,
 } from './Header.styles';
-import { Box, Grid, Stack, Typography } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import logo from '../../../assets/images/logo.png';
 import { useBreakpoint } from '@benbeck764/react-components';
 import { Navigation } from './components/Navigation/Navigation';

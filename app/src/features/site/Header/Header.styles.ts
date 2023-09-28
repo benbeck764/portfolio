@@ -24,13 +24,25 @@ export const StyledHeaderContainer = styled(Box)(({ theme }: { theme: Theme }) =
 }));
 
 export const StyledHeader = styled(AppBar)(() => ({
-  backgroundColor: 'transparent',
+  background: 'transparent',
+  opacity: 1,
   height: 'inherit',
+
+  '&::before': {
+    content: '""',
+    backdropFilter: 'saturate(180%) blur(20px)',
+    position: 'absolute',
+    height: '100%',
+    width: '100%',
+  },
+
+  '&::after': {
+    content: '""',
+    clear: 'both',
+  },
 }));
 
 export const StyledHeaderWrapper = styled(Toolbar)(({ theme }: { theme: Theme }) => ({
-  backgroundColor: 'transparent',
-
   [theme.breakpoints.up('xs')]: {
     paddingLeft: 16,
     paddingRight: 16,
