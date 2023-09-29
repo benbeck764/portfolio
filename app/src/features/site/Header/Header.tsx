@@ -4,15 +4,19 @@ import {
   StyledHeaderContainer,
   StyledHeaderWrapper,
 } from './Header.styles';
-import { Box, Grid } from '@mui/material';
+import { Box, Grid, Slide, useScrollTrigger } from '@mui/material';
 import logo from '../../../assets/images/logo.png';
 import { useBreakpoint } from '@benbeck764/react-components';
 import { Navigation } from './components/Navigation/Navigation';
+import { Link } from 'react-router-dom';
+import { AppRoutes, RouteName } from '../../../routing/common/routes';
 
 export const Header: FC = () => {
   const { breakpoint } = useBreakpoint();
+  const scrollTrigger = useScrollTrigger();
+
   return (
-    <>
+    <Slide appear={false} direction="down" in={!scrollTrigger}>
       <StyledHeaderContainer>
         <StyledHeader elevation={0}>
           <StyledHeaderWrapper variant="dense">
@@ -24,13 +28,21 @@ export const Header: FC = () => {
                 alignItems="center"
                 justifyContent="flex-start"
               >
-                <Box
-                  component="img"
-                  alt="BenBeck.dev Logo"
-                  src={logo}
-                  display="flex"
-                  height={40}
-                ></Box>
+                <Link to={AppRoutes[RouteName.Site].path}>
+                  <Box
+                    component="img"
+                    alt="BenBeck.dev Logo"
+                    src={logo}
+                    display="flex"
+                    height={40}
+                    sx={{
+                      '&:hover': {
+                        transition: 'all .25s ease-in-out',
+                        transform: 'scale(1.05)',
+                      },
+                    }}
+                  ></Box>
+                </Link>
               </Grid>
               <Grid
                 item
@@ -62,6 +74,6 @@ export const Header: FC = () => {
           </StyledHeaderWrapper>
         </StyledHeader>
       </StyledHeaderContainer>
-    </>
+    </Slide>
   );
 };

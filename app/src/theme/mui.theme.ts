@@ -31,6 +31,13 @@ export const getMUITheme = (themeBaseOptions: ThemeOptions): ThemeOptions => {
           },
         },
       },
+      MuiBackdrop: {
+        styleOverrides: {
+          root: {
+            backdropFilter: `blur(4.5px) brightness(0.65)`,
+          },
+        },
+      },
     },
   };
 };

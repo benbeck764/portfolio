@@ -4,14 +4,23 @@ import { getMUITheme } from './mui.theme';
 import { getPalette } from './pallete';
 
 type CustomPaletteColors = {
-  constBlue: string;
-  variableBlue: string;
-  commentGreen: {
-    main: string;
-    light: string;
+  blue: {
+    const: string;
+    variable: string;
   };
-  bracketYellow: string;
-  typeGreen: string;
+  green: {
+    comment: {
+      main: string;
+      light: string;
+    };
+    type: string;
+  };
+  pink: {
+    symbol: string;
+  };
+  yellow: {
+    symbol: string;
+  };
 };
 
 declare module '@mui/material/styles' {

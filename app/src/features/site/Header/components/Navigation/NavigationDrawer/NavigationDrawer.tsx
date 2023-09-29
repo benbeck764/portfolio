@@ -91,8 +91,8 @@ export const NavigationDrawer: FC<NavigationDrawerProps> = (
             }}
             sx={{
               transition: `transform 0.25s cubic-bezier(${
-                open ? '0.215, 0.61, 0.355, 1' : '0.55, 0.055, 0.675, 0.19'
-              }) ${open ? '0.12s' : '0s'}`,
+                open ? '0.225, 0.63, 0.345, 1' : '0.53, 0.065, 0.685, 0.2'
+              }) ${open ? '0.125s' : '0s'}`,
               transform: `rotate(${open ? '0deg' : '225deg'})`,
             }}
           />

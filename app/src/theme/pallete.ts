@@ -6,14 +6,23 @@ const paletteBase: PaletteOptions = {
     white: '#FFFFFF',
   },
   custom: {
-    constBlue: '#569CD6',
-    variableBlue: '#4FC1FF',
-    commentGreen: {
-      main: '#6A9955',
-      light: '#6A782D',
+    blue: {
+      const: '#569CD6',
+      variable: '#4FC1FF',
     },
-    bracketYellow: '#FFD700',
-    typeGreen: '#4EC9B0',
+    green: {
+      comment: {
+        main: '#6A9955',
+        light: '#6A782D',
+      },
+      type: '#4EC9B0',
+    },
+    pink: {
+      symbol: '#BB86C0',
+    },
+    yellow: {
+      symbol: '#FFD700',
+    },
   },
   grey: {
     100: '#F4F4F4',
