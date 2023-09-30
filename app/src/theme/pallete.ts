@@ -56,7 +56,7 @@ export const getPalette = (): PaletteOptions => {
       default: '#1F1F1F',
     },
     primary: {
-      main: '#FFFFFF',
+      main: '#BB86C0',
       light: '#1FC3FF',
       dark: '#004B66',
     },

@@ -6,11 +6,7 @@ export const StyledPageWrapper = styled(Stack)(({ theme }: { theme: Theme }) => 
     paddingRight: '25px',
     marginTop: '8px',
   },
-  [theme.breakpoints.up('md')]: {
-    paddingLeft: '50px',
-    paddingRight: '50px',
-    marginTop: '32px',
-  },
+
   [theme.breakpoints.up('lg')]: {
     paddingLeft: '100px',
     paddingRight: '100px',

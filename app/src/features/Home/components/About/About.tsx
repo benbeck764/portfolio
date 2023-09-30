@@ -18,7 +18,7 @@ const About: FC = () => {
           Ben Beck
           <Typography
             component="span"
-            variant="h1"
+            variant="h3"
             sx={{ color: (theme) => theme.palette.custom.yellow.symbol }}
           >
             .
