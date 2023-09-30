@@ -1,11 +1,12 @@
 import { FC, useEffect } from 'react';
 import { Box, Stack } from '@mui/material';
 import { BreakpointDevice, useBreakpoint } from '@benbeck764/react-components';
+import { useLocation } from 'react-router-dom';
 import { StyledPageWrapper } from '../../_shared';
 import Introduction from './components/Introduction/Introduction';
 import About from './components/About/About';
 import Experience from './components/Experience/Experience';
-import { useLocation } from 'react-router-dom';
+import Work from './components/Work/Work';
 
 const Home: FC = () => {
   const { device } = useBreakpoint();
@@ -25,7 +26,7 @@ const Home: FC = () => {
   }, [hash]);
 
   return (
-    <StyledPageWrapper direction="column" gap={20}>
+    <StyledPageWrapper direction="column" gap={25}>
       <Introduction />
       <About />
       <Stack
@@ -36,6 +37,7 @@ const Home: FC = () => {
       >
         <Experience />
       </Stack>
+      <Work />
       {/* [TODO]: Temporary for spacing */}
       <Box mt={20}></Box>
     </StyledPageWrapper>
