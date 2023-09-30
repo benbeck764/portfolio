@@ -26,15 +26,8 @@ export const experienceTabs: TabItem[] = [
           'React',
           'Redux',
           'React Native',
-          'Jest',
           'Node.js',
           'SQL Server',
-          'Gremlin',
-          'Power BI',
-          'Azure B2C',
-          'Auth0',
-          'Stripe',
-          'typeorm',
         ]}
       />
     ),
@@ -62,7 +55,6 @@ export const experienceTabs: TabItem[] = [
         technologies={[
           'Microsoft Azure',
           'C#',
-          '.NET Core',
           'TypeScript',
           'Angular',
           'NgRx',
@@ -103,8 +95,6 @@ export const experienceTabs: TabItem[] = [
         technologies={[
           'Microsoft Azure',
           'C#',
-          '.NET Core',
-          'ASP.NET Core',
           'Solidity',
           'TypeScript',
           'Angular',
@@ -140,9 +130,6 @@ export const experienceTabs: TabItem[] = [
           'PowerShell',
           'Solidity',
           'C#',
-          '.NET',
-          'ASP.NET Web API',
-          'JavaScript',
           'TypeScript',
           'Node.js',
           'Python',
@@ -182,17 +169,11 @@ export const experienceTabs: TabItem[] = [
         technologies={[
           'Microsoft Azure',
           'C#',
-          '.NET',
-          'ASP.NET',
-          'WCF',
-          'SQL Server',
-          'JavaScript',
           'TypeScript',
           'Angular',
           'AngularJS',
           'D3.js',
-          'Knockout.js',
-          'jQuery',
+          'SQL Server',
           'Power BI',
         ]}
       />
@@ -220,8 +201,6 @@ export const experienceTabs: TabItem[] = [
           'AngularJS',
           'jQuery',
           'C#',
-          '.NET',
-          'ASP.NET',
           'WCF',
           'SQL Server',
           'HTML',
@@ -255,11 +234,9 @@ export const experienceTabs: TabItem[] = [
           'Express.js',
           'jQuery',
           'C#',
-          '.NET',
           'WCF',
           'XML',
           'HTML',
-          'Jade',
           'CSS',
         ]}
         internship={true}

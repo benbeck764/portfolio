@@ -1,12 +1,13 @@
-import { Box, Link, List, ListItem, Stack, Typography } from '@mui/material';
+import { Box, Link, List, Stack, Typography } from '@mui/material';
 import React, { FC, useEffect, useRef, useState } from 'react';
 import { toLocalDateStringShort } from '../../../../../../utilities';
 import {
-  StyledConnector,
-  StyledBullet,
-  StyledLine,
+  StyledExperienceConnector,
+  StyledExperienceBullet,
+  StyledExperienceLine,
   StyledExperienceInfoWrapper,
   StyledExperienceStickyHeader,
+  StyledExperienceListItem,
 } from './ExperienceInfo.styles';
 import ContractInfo from './ContractInfo';
 import InternshipInfo from './InternshipInfo';
@@ -111,11 +112,11 @@ const ExperienceInfo: FC<ExperienceInfoProps> = (props: ExperienceInfoProps) => 
 
           <List sx={{ listStyleType: 'circle', listStylePosition: 'inside', mt: 1 }}>
             {roles[0].accomplishments.map((accomplishment: string, index: number) => (
-              <ListItem sx={{ display: 'list-item', py: 0.5 }} key={index}>
+              <StyledExperienceListItem key={index}>
                 <Typography variant="paragraph" component="span">
                   {accomplishment}
                 </Typography>
-              </ListItem>
+              </StyledExperienceListItem>
             ))}
           </List>
         </>
@@ -123,7 +124,7 @@ const ExperienceInfo: FC<ExperienceInfoProps> = (props: ExperienceInfoProps) => 
 
       {roles.length > 1 && (
         <Box>
-          <StyledExperienceStickyHeader>
+          <StyledExperienceStickyHeader mb={1}>
             <Typography pl={1} variant="h6">
               <Link href={companyUrl} target="_blank" rel="noopener noreferrer">
                 {companyName}
@@ -131,18 +132,18 @@ const ExperienceInfo: FC<ExperienceInfoProps> = (props: ExperienceInfoProps) => 
             </Typography>
           </StyledExperienceStickyHeader>
 
-          <Stack direction="column" mt={1}>
+          <Stack direction="column">
             {roles.map((role: Role, index: number) => (
               <Stack direction="row" key={index} gap={1.5}>
                 <Box>
-                  <StyledConnector>
-                    <StyledBullet ref={refs[index]} />
+                  <StyledExperienceConnector>
+                    <StyledExperienceBullet ref={refs[index]} />
                     {index < roles.length - 1 && (
-                      <StyledLine sx={{ height: distances[index] - 20 }} />
+                      <StyledExperienceLine sx={{ height: distances[index] - 20 }} />
                     )}
-                  </StyledConnector>
+                  </StyledExperienceConnector>
                 </Box>
-                <Box>
+                <Box mb={1}>
                   <Typography
                     variant="h6"
                     sx={{ color: (theme) => theme.palette.custom.green.type }}
@@ -167,11 +168,11 @@ const ExperienceInfo: FC<ExperienceInfoProps> = (props: ExperienceInfoProps) => 
                   </Typography>
                   <List sx={{ listStyleType: 'circle', listStylePosition: 'inside' }}>
                     {role.accomplishments.map((accomplishment: string, index: number) => (
-                      <ListItem sx={{ display: 'list-item', py: 0.5 }} key={index}>
+                      <StyledExperienceListItem key={index}>
                         <Typography variant="paragraph" component="span">
                           {accomplishment}
                         </Typography>
-                      </ListItem>
+                      </StyledExperienceListItem>
                     ))}
                   </List>
                 </Box>
