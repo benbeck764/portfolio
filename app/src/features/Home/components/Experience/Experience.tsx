@@ -7,7 +7,7 @@ import SectionHeader from '../_common/SectionHeader';
 const Experience: FC = () => {
   const { device } = useBreakpoint();
   return (
-    <Box component="section">
+    <Box component="section" id="experience">
       <SectionHeader title="// Work Experience" />
       <AppTabs
         tabs={experienceTabs}

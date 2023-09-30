@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 
 const Introduction: FC = () => {
   return (
-    <Box component="section">
+    <Box component="section" id="home">
       <Box>
         <Typography
           variant="h6"

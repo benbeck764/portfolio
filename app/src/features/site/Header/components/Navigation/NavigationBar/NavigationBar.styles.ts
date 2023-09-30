@@ -19,10 +19,10 @@ export const StyledNavigationButton = styled(Button)(({ theme }) => ({
   '&.MuiButtonBase-root': {
     color: theme.palette.common.white,
     '&:focus': {
-      color: theme.palette.custom.green.comment.main,
+      color: theme.palette.custom.pink.symbol,
     },
     '&:hover': {
-      color: theme.palette.custom.green.comment.light,
+      color: theme.palette.custom.pink.symbol,
     },
   },
 }));

@@ -4,7 +4,7 @@ import SectionHeader from '../_common/SectionHeader';
 
 const About: FC = () => {
   return (
-    <Box component="section" maxWidth={700}>
+    <Box component="section" maxWidth={700} id="about">
       <SectionHeader title="// About Me" />
       <Stack mt={3} gap={1.5}>
         <Typography variant="paragraph">
