@@ -33,11 +33,19 @@ export const experienceTabs: TabItem[] = [
         }}
         technologies={[
           'Microsoft Azure',
-          'Azure B2C',
           'TypeScript',
           'React',
+          'Redux',
           'React Native',
+          'Jest',
+          'Node.js',
+          'SQL Server',
           'Gremlin',
+          'Power BI',
+          'Azure B2C',
+          'Auth0',
+          'Stripe',
+          'typeorm',
         ]}
       />
     ),
@@ -63,7 +71,17 @@ export const experienceTabs: TabItem[] = [
         companyLogo={{ logo: ADMLogo, width: 180, height: 40 }}
         contractCompany="Apex Systems"
         contractCompanyUrl="https://www.apexsystems.com"
-        technologies={['tech1, tech2, tech3, tech4, tech5']}
+        technologies={[
+          'Microsoft Azure',
+          'C#',
+          '.NET Core',
+          'TypeScript',
+          'Angular',
+          'NgRx',
+          'D3.js',
+          'React',
+          'SQL Server',
+        ]}
         contract={true}
       />
     ),
@@ -95,7 +113,17 @@ export const experienceTabs: TabItem[] = [
         companyName="Concurrency, Inc."
         companyUrl="https://www.concurrency.com"
         companyLogo={{ logo: ConcurrencyLogo, width: 185, height: 50 }}
-        technologies={['tech1, tech2, tech3, tech4, tech5']}
+        technologies={[
+          'Microsoft Azure',
+          'C#',
+          '.NET Core',
+          'ASP.NET Core',
+          'Solidity',
+          'TypeScript',
+          'Angular',
+          'React',
+          'SQL Server',
+        ]}
       />
     ),
   },
@@ -120,7 +148,19 @@ export const experienceTabs: TabItem[] = [
         companyUrl="https://www.microsoft.com"
         contractCompanyUrl="https://www.teksystems.com"
         companyLogo={{ logo: MicrosoftLogo, width: 150, height: 30 }}
-        technologies={['tech1, tech2, tech3, tech4, tech5']}
+        technologies={[
+          'Microsoft Azure',
+          'Bash',
+          'PowerShell',
+          'Solidity',
+          'C#',
+          '.NET',
+          'ASP.NET Web API',
+          'JavaScript',
+          'TypeScript',
+          'Node.js',
+          'Python',
+        ]}
         contract={true}
       />
     ),
@@ -154,7 +194,22 @@ export const experienceTabs: TabItem[] = [
         companyName="Concurrency, Inc."
         companyUrl="https://www.concurrency.com"
         companyLogo={{ logo: ConcurrencyLogo, width: 150, height: 40 }}
-        technologies={['tech1, tech2, tech3, tech4, tech5']}
+        technologies={[
+          'Microsoft Azure',
+          'C#',
+          '.NET',
+          'ASP.NET',
+          'WCF',
+          'SQL Server',
+          'JavaScript',
+          'TypeScript',
+          'Angular',
+          'AngularJS',
+          'D3.js',
+          'Knockout.js',
+          'jQuery',
+          'Power BI',
+        ]}
       />
     ),
   },
@@ -176,7 +231,19 @@ export const experienceTabs: TabItem[] = [
         companyName="Advicent"
         companyUrl="https://www.advicentsolutions.com"
         companyLogo={{ logo: AdvicentLogo, width: 150, height: 40 }}
-        technologies={['tech1, tech2, tech3, tech4, tech5']}
+        technologies={[
+          'JavaScript',
+          'AngularJS',
+          'jQuery',
+          'C#',
+          '.NET',
+          'ASP.NET',
+          'WCF',
+          'SQL Server',
+          'HTML',
+          'CSS',
+          'SASS',
+        ]}
         internship={true}
       />
     ),
@@ -199,7 +266,19 @@ export const experienceTabs: TabItem[] = [
         companyName="Cognex"
         companyUrl="https://www.cognex.com"
         companyLogo={{ logo: CognexLogo, width: 180, height: 50 }}
-        technologies={['tech1, tech2, tech3, tech4, tech5']}
+        technologies={[
+          'JavaScript',
+          'Node.js',
+          'Express.js',
+          'jQuery',
+          'C#',
+          '.NET',
+          'WCF',
+          'XML',
+          'HTML',
+          'Jade',
+          'CSS',
+        ]}
         internship={true}
       />
     ),
