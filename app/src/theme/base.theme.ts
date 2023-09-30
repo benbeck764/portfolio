@@ -108,7 +108,7 @@ export function getThemeBase(palette: PaletteOptions): ThemeOptions {
         fontFamily: 'Roboto Mono, Sans-serif',
         fontSize: 14,
         fontWeight: 400,
-        lineHeight: 1,
+        lineHeight: 1.1,
         letterSpacing: -0.5,
       },
       paragraphBold: {
