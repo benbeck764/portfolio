@@ -10,7 +10,7 @@ export const StyledPageContainer = styled(Grid)(({ theme }: { theme: Theme }) =>
 
 export const StyledPageContent = styled(Box)(({ theme }: { theme: Theme }) => ({
   [theme.breakpoints.up('xs')]: {
-    width: 'calc(100% - 24px)',
+    width: 'calc(100% - 16px)',
   },
   [theme.breakpoints.up('xl')]: {
     maxWidth: theme.pageWidths['xl'],

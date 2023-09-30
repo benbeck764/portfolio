@@ -94,6 +94,7 @@ export const NavigationDrawer: FC<NavigationDrawerProps> = (
                 open ? '0.225, 0.63, 0.345, 1' : '0.53, 0.065, 0.685, 0.2'
               }) ${open ? '0.125s' : '0s'}`,
               transform: `rotate(${open ? '0deg' : '225deg'})`,
+              color: (theme) => theme.palette.common.white,
             }}
           />
         </Box>
@@ -180,7 +181,7 @@ export const NavigationDrawer: FC<NavigationDrawerProps> = (
                                   }),
                                 }
                               : {
-                                  color: (theme) => theme.palette.primary.main,
+                                  color: (theme) => theme.palette.common.white,
                                   '&:hover': {
                                     color: (theme) => theme.palette.primary.dark,
                                   },
@@ -211,7 +212,11 @@ export const NavigationDrawer: FC<NavigationDrawerProps> = (
                   }}
                   onSelect={handleButtonVariantClick(config)}
                 >
-                  <Typography variant="mobileParagraphBold" color="primary">
+                  <Typography
+                    sx={{ color: (theme) => theme.palette.common.white }}
+                    variant="mobileParagraphBold"
+                    color="primary"
+                  >
                     {config.label}
                   </Typography>
                 </AppMenuItem>

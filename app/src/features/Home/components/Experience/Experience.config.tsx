@@ -1,5 +1,11 @@
 import { TabItem } from '@benbeck764/react-components';
 import ExperienceInfo from './components/ExperienceInfo/ExperienceInfo';
+import BenBeckDevLogo from '../../../../assets/images/logo.png';
+import ADMLogo from '../../../../assets/images/companies/ADM.png';
+import ConcurrencyLogo from '../../../../assets/images/companies/Concurrency.png';
+import MicrosoftLogo from '../../../../assets/images/companies/Microsoft.png';
+import AdvicentLogo from '../../../../assets/images/companies/Advicent.png';
+import CognexLogo from '../../../../assets/images/companies/Cognex.png';
 
 export const experienceTabs: TabItem[] = [
   {
@@ -20,7 +26,19 @@ export const experienceTabs: TabItem[] = [
         ]}
         companyName="BenBeck.dev"
         companyUrl="https://benbeck.dev"
-        technologies={['tech1, tech2, tech3, tech4, tech5']}
+        companyLogo={{
+          logo: BenBeckDevLogo,
+          width: 180,
+          height: 40,
+        }}
+        technologies={[
+          'Microsoft Azure',
+          'Azure B2C',
+          'TypeScript',
+          'React',
+          'React Native',
+          'Gremlin',
+        ]}
       />
     ),
   },
@@ -42,6 +60,7 @@ export const experienceTabs: TabItem[] = [
         ]}
         companyName="ADM"
         companyUrl="https://www.adm.com"
+        companyLogo={{ logo: ADMLogo, width: 180, height: 40 }}
         contractCompany="Apex Systems"
         contractCompanyUrl="https://www.apexsystems.com"
         technologies={['tech1, tech2, tech3, tech4, tech5']}
@@ -75,6 +94,7 @@ export const experienceTabs: TabItem[] = [
         ]}
         companyName="Concurrency, Inc."
         companyUrl="https://www.concurrency.com"
+        companyLogo={{ logo: ConcurrencyLogo, width: 185, height: 50 }}
         technologies={['tech1, tech2, tech3, tech4, tech5']}
       />
     ),
@@ -99,6 +119,7 @@ export const experienceTabs: TabItem[] = [
         contractCompany="TEKsystems"
         companyUrl="https://www.microsoft.com"
         contractCompanyUrl="https://www.teksystems.com"
+        companyLogo={{ logo: MicrosoftLogo, width: 150, height: 30 }}
         technologies={['tech1, tech2, tech3, tech4, tech5']}
         contract={true}
       />
@@ -132,6 +153,7 @@ export const experienceTabs: TabItem[] = [
         ]}
         companyName="Concurrency, Inc."
         companyUrl="https://www.concurrency.com"
+        companyLogo={{ logo: ConcurrencyLogo, width: 150, height: 40 }}
         technologies={['tech1, tech2, tech3, tech4, tech5']}
       />
     ),
@@ -151,8 +173,9 @@ export const experienceTabs: TabItem[] = [
             endDate: new Date(2016, 2),
           },
         ]}
-        companyName="Advicent Solutions"
+        companyName="Advicent"
         companyUrl="https://www.advicentsolutions.com"
+        companyLogo={{ logo: AdvicentLogo, width: 150, height: 40 }}
         technologies={['tech1, tech2, tech3, tech4, tech5']}
         internship={true}
       />
@@ -166,15 +189,16 @@ export const experienceTabs: TabItem[] = [
           {
             title: 'Software Engineering Intern',
             accomplishments: [
-              'Developed an internal tool for managing and controlling resource usage.',
+              'Developed an internal tool for managing, monitoring and controlling internal office resource usage.',
               'Worked closely with the QA team performing UI automation testing.',
             ],
             startDate: new Date(2014, 5),
             endDate: new Date(2014, 11),
           },
         ]}
-        companyName="Cognex Corporation"
+        companyName="Cognex"
         companyUrl="https://www.cognex.com"
+        companyLogo={{ logo: CognexLogo, width: 180, height: 50 }}
         technologies={['tech1, tech2, tech3, tech4, tech5']}
         internship={true}
       />

@@ -1,5 +1,5 @@
 import { Box, Link, List, ListItem, Stack, Typography } from '@mui/material';
-import { FC, useEffect, useRef, useState } from 'react';
+import React, { FC, useEffect, useRef, useState } from 'react';
 import { toLocalDateStringShort } from '../../../../../../utilities';
 import {
   StyledConnector,
@@ -10,6 +10,8 @@ import {
 } from './ExperienceInfo.styles';
 import ContractInfo from './ContractInfo';
 import InternshipInfo from './InternshipInfo';
+import CompanyLogo from './CompanyLogo';
+import TechnologyChip from './TechnologyChip';
 
 type Role = {
   title: string;
@@ -18,11 +20,18 @@ type Role = {
   endDate?: Date;
 };
 
+type CompanyLogoInfo = {
+  logo: string;
+  width?: number;
+  height?: number;
+};
+
 type ExperienceInfoProps = {
   roles: Role[];
   companyName: string;
-  contractCompany?: string;
   companyUrl: string;
+  companyLogo?: CompanyLogoInfo;
+  contractCompany?: string;
   contractCompanyUrl?: string;
   technologies: string[];
   contract?: boolean;
@@ -33,8 +42,9 @@ const ExperienceInfo: FC<ExperienceInfoProps> = (props: ExperienceInfoProps) => 
   const {
     roles,
     companyName,
-    contractCompany,
     companyUrl,
+    companyLogo,
+    contractCompany,
     contractCompanyUrl,
     technologies,
     contract,
@@ -77,36 +87,50 @@ const ExperienceInfo: FC<ExperienceInfoProps> = (props: ExperienceInfoProps) => 
     <StyledExperienceInfoWrapper>
       {roles.length === 1 && (
         <>
-          <Typography
-            variant="h6"
-            component="span"
-            sx={{ color: (theme) => theme.palette.custom.green.type }}
-          >
-            {roles[0].title}
-            <Typography
-              variant="h6"
-              component="span"
-              sx={{ color: (theme) => theme.palette.custom.yellow.symbol }}
-            >
-              {' @ '}
-            </Typography>
-            <Link href={companyUrl} target="_blank">
-              {companyName}
-            </Link>
-          </Typography>
-          {contract && (
-            <ContractInfo company={contractCompany} companyUrl={contractCompanyUrl} />
-          )}
-          {internship && <InternshipInfo />}
-          <Typography
-            variant="paragraphBold"
-            mt={1}
-            sx={{ color: (theme) => theme.palette.custom.blue.const }}
-          >
-            {`${toLocalDateStringShort(roles[0].startDate)} - ${
-              roles[0].endDate ? toLocalDateStringShort(roles[0].endDate) : 'Present'
-            }`}
-          </Typography>
+          <Stack direction="row" alignItems="flex-start" justifyContent="space-between">
+            <Box>
+              <Typography
+                variant="h6"
+                component="span"
+                sx={{ color: (theme) => theme.palette.custom.green.type }}
+              >
+                {roles[0].title}
+                <Typography
+                  variant="h6"
+                  component="span"
+                  sx={{ color: (theme) => theme.palette.custom.yellow.symbol }}
+                >
+                  {' @ '}
+                </Typography>
+                <Link href={companyUrl} target="_blank">
+                  {companyName}
+                </Link>
+              </Typography>
+              {contract && (
+                <ContractInfo company={contractCompany} companyUrl={contractCompanyUrl} />
+              )}
+              {internship && <InternshipInfo />}
+              <Typography
+                variant="paragraphBold"
+                mt={1}
+                sx={{ color: (theme) => theme.palette.custom.blue.const }}
+              >
+                {`${toLocalDateStringShort(roles[0].startDate)} - ${
+                  roles[0].endDate ? toLocalDateStringShort(roles[0].endDate) : 'Present'
+                }`}
+              </Typography>
+            </Box>
+            {companyLogo && (
+              <CompanyLogo
+                name={companyName}
+                logo={companyLogo.logo}
+                url={companyUrl}
+                height={companyLogo.height}
+                width={companyLogo.width}
+              />
+            )}
+          </Stack>
+
           <List sx={{ listStyleType: 'circle', listStylePosition: 'inside', mt: 1 }}>
             {roles[0].accomplishments.map((accomplishment: string, index: number) => (
               <ListItem sx={{ display: 'list-item', py: 0.5 }} key={index}>
@@ -118,17 +142,33 @@ const ExperienceInfo: FC<ExperienceInfoProps> = (props: ExperienceInfoProps) => 
           </List>
         </>
       )}
+
       {roles.length > 1 && (
         <Box>
           <StyledExperienceStickyHeader>
-            <Typography pl={1} variant="h6">
-              <Link href={companyUrl} target="_blank">
-                {companyName}
-              </Link>
-            </Typography>
+            <Stack direction="row" alignItems="flex-start" justifyContent="space-between">
+              <Box>
+                <Typography pl={1} variant="h6">
+                  <Link href={companyUrl} target="_blank">
+                    {companyName}
+                  </Link>
+                </Typography>
+              </Box>
+              <Box>
+                {companyLogo && (
+                  <CompanyLogo
+                    name={companyName}
+                    logo={companyLogo.logo}
+                    url={companyUrl}
+                    height={companyLogo.height}
+                    width={companyLogo.width}
+                  />
+                )}
+              </Box>
+            </Stack>
           </StyledExperienceStickyHeader>
 
-          <Stack direction="column" mt={1}>
+          <Stack direction="column">
             {roles.map((role: Role, index: number) => (
               <Stack direction="row" key={index} gap={1.5}>
                 <Box>
@@ -177,6 +217,12 @@ const ExperienceInfo: FC<ExperienceInfoProps> = (props: ExperienceInfoProps) => 
           </Stack>
         </Box>
       )}
+
+      <Stack direction="row" gap={0.5} flexWrap="wrap" mt={1}>
+        {technologies.map((technology: string, index: number) => (
+          <TechnologyChip key={index} name={technology} />
+        ))}
+      </Stack>
     </StyledExperienceInfoWrapper>
   );
 };

@@ -1147,10 +1147,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@benbeck764/react-components@^1.0.43":
-  version "1.0.43"
-  resolved "https://npm.pkg.github.com/download/@benbeck764/react-components/1.0.43/220953afad54508d91dde9c8041f59d89cfef7f9#220953afad54508d91dde9c8041f59d89cfef7f9"
-  integrity sha512-jrCI0MAvxGjkJMbmvC/c3znBGz9BjU3uchgMb1YENwnPE7q+mGGPIBG/mseo6OZjlQGj8x5DXeULtALmnnClMw==
+"@benbeck764/react-components@^1.0.44":
+  version "1.0.44"
+  resolved "https://npm.pkg.github.com/download/@benbeck764/react-components/1.0.44/b13ec22a958e3c6b536d3382e9d23822fc911e75#b13ec22a958e3c6b536d3382e9d23822fc911e75"
+  integrity sha512-b4o5I1M6YYnQKyiDm89CuQ01snBTr5sBlLng5taGYCTj0h+EgiShJtu7C19iCGJgE6Uc9o6haqIA4Y19mkB0vQ==
   optionalDependencies:
     moment "^2.29.4"
     react-dropzone "^14.2.3"

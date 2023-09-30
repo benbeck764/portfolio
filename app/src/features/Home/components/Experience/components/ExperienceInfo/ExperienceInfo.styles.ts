@@ -1,9 +1,9 @@
 import { styled, Theme, Box } from '@mui/material';
 
 export const StyledExperienceInfoWrapper = styled(Box)(() => ({
-  paddingLeft: '16px',
+  paddingLeft: '32px',
   paddingRight: '16px',
-  maxWidth: '650px',
+  maxWidth: '730px',
   overflowY: 'auto',
 }));
 
@@ -27,7 +27,6 @@ export const StyledConnector = styled(Box)(() => ({
 export const StyledBullet = styled(Box)(({ theme }: { theme: Theme }) => ({
   width: '8px',
   height: '8px',
-  //backgroundColor: theme.palette.common.white,
   backgroundColor: theme.palette.custom.yellow.symbol,
   borderRadius: '50%',
 }));
@@ -35,7 +34,6 @@ export const StyledBullet = styled(Box)(({ theme }: { theme: Theme }) => ({
 export const StyledLine = styled(Box)(({ theme }: { theme: Theme }) => ({
   width: '2px',
   height: '30px',
-  //backgroundColor: theme.palette.common.white,
   backgroundColor: theme.palette.custom.yellow.symbol,
   marginTop: '5px',
   marginBottom: '-3px',
