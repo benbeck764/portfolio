@@ -29,7 +29,7 @@ const ContractInfo: FC<ContractInfoProps> = (props: ContractInfoProps) => {
       >
         {' via '}
       </Typography>
-      <Link href={companyUrl} target="_blank">
+      <Link href={companyUrl} target="_blank" rel="noopener noreferrer">
         {company}
       </Link>
       <Typography
