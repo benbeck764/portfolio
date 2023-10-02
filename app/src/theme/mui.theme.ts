@@ -8,12 +8,12 @@ export const getMUITheme = (themeBaseOptions: ThemeOptions): ThemeOptions => {
     components: {
       MuiCssBaseline: {
         styleOverrides: {
-          body: {
+          html: {
             '*::-webkit-scrollbar': {
               width: '14px',
             },
             '*::-webkit-scrollbar-thumb': {
-              backgroundColor: themeBase.palette.grey[300],
+              backgroundColor: themeBase.palette.coolGrey[700],
               borderRadius: '10px',
               border: '4px solid rgba(0,0,0,0)',
               backgroundClip: 'padding-box',
@@ -28,6 +28,13 @@ export const getMUITheme = (themeBaseOptions: ThemeOptions): ThemeOptions => {
               WebkitBoxShadow: `0 0 0 100px ${themeBase.palette.common.white} inset`,
               WebKitTextFillColor: `${themeBase.palette.common.white}`,
             },
+          },
+        },
+      },
+      MuiBackdrop: {
+        styleOverrides: {
+          root: {
+            backdropFilter: `blur(4.5px) brightness(0.65)`,
           },
         },
       },

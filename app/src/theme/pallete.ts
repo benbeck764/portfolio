@@ -5,6 +5,25 @@ const paletteBase: PaletteOptions = {
     black: '#000000',
     white: '#FFFFFF',
   },
+  custom: {
+    blue: {
+      const: '#569CD6',
+      variable: '#4FC1FF',
+    },
+    green: {
+      comment: {
+        main: '#6A9955',
+        light: '#6A782D',
+      },
+      type: '#4EC9B0',
+    },
+    pink: {
+      symbol: '#BB86C0',
+    },
+    yellow: {
+      symbol: '#FFD700',
+    },
+  },
   grey: {
     100: '#F4F4F4',
     200: '#E0E0E0',
@@ -34,10 +53,10 @@ export const getPalette = (): PaletteOptions => {
     ...paletteBase,
     mode: 'light',
     background: {
-      default: paletteBase.grey?.[100] ?? '#F4F4F4',
+      default: '#1F1F1F',
     },
     primary: {
-      main: '#0078A3',
+      main: '#BB86C0',
       light: '#1FC3FF',
       dark: '#004B66',
     },
@@ -51,7 +70,7 @@ export const getPalette = (): PaletteOptions => {
       focus: '#000000',
     },
     text: {
-      primary: '#000000',
+      primary: '#FFFFFF',
       secondary: '#FFFFFF',
     },
     success: {

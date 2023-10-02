@@ -22,7 +22,7 @@ const AppContent: FC = () => {
         alignItems="center"
         wrap="nowrap"
       >
-        <StyledPageContent>
+        <StyledPageContent component="main">
           <AppRouting />
         </StyledPageContent>
       </StyledPageContainer>
