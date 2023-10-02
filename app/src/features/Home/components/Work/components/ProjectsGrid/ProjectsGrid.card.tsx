@@ -12,6 +12,7 @@ export const createCardViewDefinitions = (): AppGridCardViewDefinitions<Project>
       return <ProjectCard project={item} />;
     },
     columnCount: 1,
+    columnSpacing: 0,
   },
   lg: {
     virtualizedProps: {

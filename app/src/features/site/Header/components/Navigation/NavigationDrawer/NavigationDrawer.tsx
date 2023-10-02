@@ -13,6 +13,7 @@ import {
   AppMenuItem,
   CloseButton,
 } from '@benbeck764/react-components';
+import ContactLinks from '../../../../../Home/components/_common/ContactLinks';
 
 interface NavigationDrawerProps {
   navigationConfig: NavMenuConfig[];
@@ -81,148 +82,156 @@ export const NavigationDrawer: FC<NavigationDrawerProps> = (
         children: <MenuIcon fontSize="large" />,
       }}
     >
-      <Stack direction="column">
-        <Box display="flex" justifyContent="flex-end" pr={2} pt={0.5}>
-          <CloseButton
-            fontSize="large"
-            onClick={() => {
-              setForcedToggleState(false);
-              setOpen(false);
-            }}
-            sx={{
-              transition: `transform 0.25s cubic-bezier(${
-                open ? '0.225, 0.63, 0.345, 1' : '0.53, 0.065, 0.685, 0.2'
-              }) ${open ? '0.125s' : '0s'}`,
-              transform: `rotate(${open ? '0deg' : '225deg'})`,
-              color: (theme) => theme.palette.common.white,
-            }}
-          />
-        </Box>
-        <Box sx={{ overflowY: 'scroll', pl: 1.5, py: 1 }}>
-          {props.navigationConfig.map((config: NavMenuConfig, index: number) => (
-            <Fragment key={index}>
-              {config.variant === NavigationOptionVariant.Menu ? (
-                <AppDropdown
-                  variant="header"
-                  hideCaret={(config.menuItems?.length ?? 0) <= 0}
-                  disabled={config.disabled}
-                  renderClosed={
-                    pathname === '/' ||
-                    !config.menuItems.some((mi: NavMenuOptions) =>
-                      mi.navigationRoute?.startsWith(pathname)
-                    )
-                  }
-                  headerBoxSx={{
-                    padding: '8px 8px',
-                    margin: '0px',
-                    ...(config.disabled
-                      ? {}
-                      : {
-                          '&:hover': {
-                            backgroundColor: (theme) => theme.palette.coolGrey[100],
-                          },
-                          '&:focus': {
-                            backgroundColor: (theme) => theme.palette.coolGrey[100],
-                            outline: 'none',
-                          },
-                        }),
-                  }}
-                  title={
-                    <Stack
-                      direction="row"
-                      gap={1}
-                      alignItems="center"
-                      justifyContent="flex-start"
-                    >
-                      <Box
-                        sx={{
-                          '&.MuiSvgIcon-root': {
-                            color: (theme) => theme.palette.primary.main,
-                          },
-                        }}
+      <Stack direction="column" justifyContent="space-between" height="100%">
+        <Box>
+          <Box display="flex" justifyContent="flex-end" pr={2} pt={0.5}>
+            <CloseButton
+              fontSize="large"
+              onClick={() => {
+                setForcedToggleState(false);
+                setOpen(false);
+              }}
+              sx={{
+                transition: `transform 0.25s cubic-bezier(${
+                  open ? '0.225, 0.63, 0.345, 1' : '0.53, 0.065, 0.685, 0.2'
+                }) ${open ? '0.125s' : '0s'}`,
+                transform: `rotate(${open ? '0deg' : '225deg'})`,
+                color: (theme) => theme.palette.common.white,
+              }}
+            />
+          </Box>
+          <Box sx={{ overflowY: 'scroll', pl: 1.5, py: 1 }}>
+            {props.navigationConfig.map((config: NavMenuConfig, index: number) => (
+              <Fragment key={index}>
+                {config.variant === NavigationOptionVariant.Menu ? (
+                  <AppDropdown
+                    variant="header"
+                    hideCaret={(config.menuItems?.length ?? 0) <= 0}
+                    disabled={config.disabled}
+                    renderClosed={
+                      pathname === '/' ||
+                      !config.menuItems.some((mi: NavMenuOptions) =>
+                        mi.navigationRoute?.startsWith(pathname)
+                      )
+                    }
+                    headerBoxSx={{
+                      padding: '8px 8px',
+                      margin: '0px',
+                      ...(config.disabled
+                        ? {}
+                        : {
+                            '&:hover': {
+                              backgroundColor: (theme) => theme.palette.coolGrey[100],
+                            },
+                            '&:focus': {
+                              backgroundColor: (theme) => theme.palette.coolGrey[100],
+                              outline: 'none',
+                            },
+                          }),
+                    }}
+                    title={
+                      <Stack
+                        direction="row"
+                        gap={1}
+                        alignItems="center"
+                        justifyContent="flex-start"
                       >
-                        {config?.icon}
-                      </Box>
-                      <Typography
-                        key={index}
-                        variant="mobileParagraphBold"
-                        sx={{
-                          color: (theme) =>
-                            config.disabled
-                              ? theme.palette.coolGrey[200]
-                              : theme.palette.primary.main,
-                          '&:hover': {
-                            color: (theme) => theme.palette.primary.dark,
-                          },
-                        }}
-                      >
-                        {config.label}
-                      </Typography>
-                    </Stack>
-                  }
-                >
-                  <Box sx={{ width: '100%' }}>
-                    {config.menuItems?.map((option: NavMenuOptions, index: number) => (
-                      <AppMenuItem
-                        key={index}
-                        sx={{ pl: 4 }}
-                        disabled={option.disabled}
-                        onSelect={() => handleClick(option)}
-                      >
-                        <Typography
-                          variant="mobileParagraphBold"
-                          sx={
-                            option.disabled
-                              ? {
-                                  color: (theme: Theme) => theme.palette.coolGrey[200],
-                                  ...(option.childOption && {
-                                    pl: (theme: Theme) => theme.spacing(2),
-                                    fontWeight: 400,
-                                  }),
-                                }
-                              : {
-                                  color: (theme) => theme.palette.common.white,
-                                  '&:hover': {
-                                    color: (theme) => theme.palette.primary.dark,
-                                  },
-                                  ...(option.childOption && {
-                                    pl: (theme: Theme) => theme.spacing(2),
-                                    fontWeight: 400,
-                                  }),
-                                }
-                          }
+                        <Box
+                          sx={{
+                            '&.MuiSvgIcon-root': {
+                              color: (theme) => theme.palette.primary.main,
+                            },
+                          }}
                         >
-                          {option.label}
+                          {config?.icon}
+                        </Box>
+                        <Typography
+                          key={index}
+                          variant="mobileParagraphBold"
+                          sx={{
+                            color: (theme) =>
+                              config.disabled
+                                ? theme.palette.coolGrey[200]
+                                : theme.palette.primary.main,
+                            '&:hover': {
+                              color: (theme) => theme.palette.primary.dark,
+                            },
+                          }}
+                        >
+                          {config.label}
                         </Typography>
-                      </AppMenuItem>
-                    ))}
-                  </Box>
-                </AppDropdown>
-              ) : (
-                <AppMenuItem
-                  sx={{
-                    '&:hover': {
-                      backgroundColor: (theme) => theme.palette.coolGrey[900],
-                    },
-                    '&:focus': {
-                      backgroundColor: (theme) => theme.palette.coolGrey[900],
-                      outline: 'none',
-                    },
-                    width: '100%',
-                  }}
-                  onSelect={handleButtonVariantClick(config)}
-                >
-                  <Typography
-                    sx={{ color: (theme) => theme.palette.common.white }}
-                    variant="mobileParagraphBold"
-                    color="primary"
+                      </Stack>
+                    }
                   >
-                    {config.label}
-                  </Typography>
-                </AppMenuItem>
-              )}
-            </Fragment>
-          ))}
+                    <Box sx={{ width: '100%' }}>
+                      {config.menuItems?.map((option: NavMenuOptions, index: number) => (
+                        <AppMenuItem
+                          key={index}
+                          sx={{ pl: 4 }}
+                          disabled={option.disabled}
+                          onSelect={() => handleClick(option)}
+                        >
+                          <Typography
+                            variant="mobileParagraphBold"
+                            sx={
+                              option.disabled
+                                ? {
+                                    color: (theme: Theme) => theme.palette.coolGrey[200],
+                                    ...(option.childOption && {
+                                      pl: (theme: Theme) => theme.spacing(2),
+                                      fontWeight: 400,
+                                    }),
+                                  }
+                                : {
+                                    color: (theme) => theme.palette.common.white,
+                                    '&:hover': {
+                                      color: (theme) => theme.palette.primary.dark,
+                                    },
+                                    ...(option.childOption && {
+                                      pl: (theme: Theme) => theme.spacing(2),
+                                      fontWeight: 400,
+                                    }),
+                                  }
+                            }
+                          >
+                            {option.label}
+                          </Typography>
+                        </AppMenuItem>
+                      ))}
+                    </Box>
+                  </AppDropdown>
+                ) : (
+                  <AppMenuItem
+                    sx={{
+                      '&:hover': {
+                        backgroundColor: (theme) => theme.palette.coolGrey[900],
+                      },
+                      '&:focus': {
+                        backgroundColor: (theme) => theme.palette.coolGrey[900],
+                        outline: 'none',
+                      },
+                      width: '100%',
+                    }}
+                    onSelect={handleButtonVariantClick(config)}
+                  >
+                    <Typography
+                      sx={{ color: (theme) => theme.palette.common.white }}
+                      variant="mobileParagraphBold"
+                      color="primary"
+                    >
+                      {config.label}
+                    </Typography>
+                  </AppMenuItem>
+                )}
+              </Fragment>
+            ))}
+          </Box>
+        </Box>
+        <Box py={2}>
+          <ContactLinks
+            iconFontSize="small"
+            iconColor={(theme: Theme) => theme.palette.custom.green.type}
+          />
         </Box>
       </Stack>
     </AppDrawer>

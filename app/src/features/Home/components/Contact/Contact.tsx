@@ -1,10 +1,8 @@
 import { FC } from 'react';
 import { Box, Link, Stack, Typography } from '@mui/material';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import EmailIcon from '@mui/icons-material/Email';
 import CopyrightIcon from '@mui/icons-material/Copyright';
 import SectionHeader from '../_common/SectionHeader';
+import ContactLinks from '../_common/ContactLinks';
 
 const Contact: FC = () => {
   return (
@@ -16,38 +14,7 @@ const Contact: FC = () => {
           drop by and say hello, my lines of communication are open. Feel free to send me
           an email or contact me via instant message!
         </Typography>
-        <Stack mt={2} gap={2} direction="row" alignItems="center" justifyContent="center">
-          <Link
-            href="https://github.com/benbeck764"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <GitHubIcon
-              sx={{ color: (theme) => theme.palette.custom.yellow.symbol }}
-              fontSize="large"
-            />
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/ngbenbeck"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <LinkedInIcon
-              sx={{ color: (theme) => theme.palette.custom.yellow.symbol }}
-              fontSize="large"
-            />
-          </Link>
-          <Link
-            href="mailto:ben.beck.764@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <EmailIcon
-              sx={{ color: (theme) => theme.palette.custom.yellow.symbol }}
-              fontSize="large"
-            />
-          </Link>
-        </Stack>
+        <ContactLinks iconFontSize="large" />
         <Stack
           mt={10}
           gap={2}
