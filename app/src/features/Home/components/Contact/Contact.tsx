@@ -17,7 +17,7 @@ const Contact: FC = () => {
         <ContactLinks iconFontSize="large" />
         <Stack
           mt={10}
-          gap={2}
+          gap={0.5}
           direction="row"
           alignItems="center"
           justifyContent="center"
@@ -46,7 +46,7 @@ const Contact: FC = () => {
                 Brittany Chiang
               </Typography>
             </Link>{' '}
-            and{' '}
+            &{' '}
             <Link href="https://tamalsen.dev/" target="_blank" rel="noopener noreferrer">
               <Typography variant="paragraphSmallBold" component="span">
                 Tamal Sen

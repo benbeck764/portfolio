@@ -211,12 +211,13 @@ export const NavigationDrawer: FC<NavigationDrawerProps> = (
                         outline: 'none',
                       },
                       width: '100%',
+                      py: 2,
                     }}
                     onSelect={handleButtonVariantClick(config)}
                   >
                     <Typography
                       sx={{ color: (theme) => theme.palette.common.white }}
-                      variant="mobileParagraphBold"
+                      variant="paragraphLarge"
                       color="primary"
                     >
                       {config.label}
@@ -229,7 +230,7 @@ export const NavigationDrawer: FC<NavigationDrawerProps> = (
         </Box>
         <Box py={2}>
           <ContactLinks
-            iconFontSize="small"
+            iconFontSize="large"
             iconColor={(theme: Theme) => theme.palette.custom.green.type}
           />
         </Box>
