@@ -1,5 +1,5 @@
 import { FC, useEffect } from 'react';
-import { Box, Stack } from '@mui/material';
+import { Stack } from '@mui/material';
 import { BreakpointDevice, useBreakpoint } from '@benbeck764/react-components';
 import { useLocation } from 'react-router-dom';
 import { StyledPageWrapper } from '../../_shared';
@@ -7,6 +7,7 @@ import Introduction from './components/Introduction/Introduction';
 import About from './components/About/About';
 import Experience from './components/Experience/Experience';
 import Work from './components/Work/Work';
+import Contact from './components/Contact/Contact';
 
 const Home: FC = () => {
   const { device } = useBreakpoint();
@@ -38,8 +39,14 @@ const Home: FC = () => {
         <Experience />
       </Stack>
       <Work />
-      {/* [TODO]: Temporary for spacing */}
-      <Box mt={20}></Box>
+      <Stack
+        {...(device !== BreakpointDevice.Mobile && {
+          alignItems: 'center',
+          justifyContent: 'center',
+        })}
+      >
+        <Contact />
+      </Stack>
     </StyledPageWrapper>
   );
 };

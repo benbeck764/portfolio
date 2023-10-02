@@ -104,7 +104,14 @@ const ProjectCard: FC<ProjectCardProps> = (props: ProjectCardProps) => {
                     sx={{ color: (theme: Theme) => theme.palette.custom.blue.variable }}
                   >
                     {technology}
-                    {index < project.technologies.length - 1 ? ' | ' : ''}
+                    <Typography
+                      key={index}
+                      variant="paragraphExtraSmall"
+                      component="span"
+                      sx={{ color: (theme: Theme) => theme.palette.common.white }}
+                    >
+                      {index < project.technologies.length - 1 ? ' | ' : ''}
+                    </Typography>
                   </Typography>
                 ))}
               </Stack>

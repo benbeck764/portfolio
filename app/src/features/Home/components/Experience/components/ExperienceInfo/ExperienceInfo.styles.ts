@@ -14,6 +14,7 @@ export const StyledExperienceInfoWrapper = styled(Box)(({ theme }: { theme: Them
     paddingRight: '32px',
   },
   maxWidth: '730px',
+  height: '415px',
 }));
 
 export const StyledExperienceStickyHeader = styled(Box)(

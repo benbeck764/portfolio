@@ -41,6 +41,19 @@ export const projects: Project[] = [
     comingSoon: true,
   },
   {
+    name: 'PowerBI.Tips Tools',
+    description: `Tools designed to unlock your creativity and provide a comfortable and simplistic way to generate a Power BI theme.
+    Users are able to view a theme gallery, generate wireframes and color palettes and modify hundreds of theme properties!`,
+    technologies: ['TypeScript', 'React', 'React Query', 'MUI', 'Azure'],
+    url: 'https://tools.powerbi.tips',
+  },
+  {
+    name: 'CustomerFirst',
+    description: `An enhanced online ordering system featuring a personalized dashboard, smart search and ordering, robust list management, finance management, and more — from any device you choose to work from!`,
+    technologies: ['TypeScript', 'React', 'Redux', 'MUI', 'Azure B2C'],
+    url: 'https://www.performancefoodservice.com/Your-Operation/Manage-Your-Order/Account-Management',
+  },
+  {
     name: 'Regulatory Clarity',
     description: `A next generation, automated tool that provides Form ADV monitoring and flagging for fund allocators. Monitors fund managers and funds, notifies you daily of all changes, indicates the level of importance for those changes, and suggests next steps.`,
     technologies: [
@@ -59,18 +72,5 @@ export const projects: Project[] = [
     description: `An automated maternal-fetal early warning system for obstetrics that automates the process of identifying patients who may be at risk for adverse outcomes during labor and delivery.`,
     technologies: ['D3.js', 'TypeScript', 'Angular', 'SignalR', 'C#'],
     url: 'https://perigen.com/periwatch-vigilance',
-  },
-  {
-    name: 'CustomerFirst',
-    description: `An enhanced online ordering system featuring a personalized dashboard, smart search and ordering, robust list management, finance management, and more—from any device you choose to work from!`,
-    technologies: ['TypeScript', 'React', 'Redux', 'MUI', 'Azure B2C'],
-    url: 'https://www.performancefoodservice.com/Your-Operation/Manage-Your-Order/Account-Management',
-  },
-  {
-    name: 'PowerBI.Tips Tools',
-    description: `Tools designed to unlock your creativity and provide a comfortable and simplistic way to generate a Power BI theme.
-    Users are able to view a theme gallery, generate wireframes and color palettes and modify hundreds of theme properties!`,
-    technologies: ['TypeScript', 'React', 'React Query', 'MUI', 'Azure'],
-    url: 'https://tools.powerbi.tips',
   },
 ];
