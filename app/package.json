@@ -1,6 +1,6 @@
 {
   "name": "portfolio-app",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@benbeck764/react-components": "^1.0.41",
@@ -9,7 +9,6 @@
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "5.11.10",
     "@mui/x-date-pickers": "^6.3.0",
-    "axios": "^0.21.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-ga4": "^2.0.0",

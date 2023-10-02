@@ -35,6 +35,9 @@ jobs:
           app_location: 'app' # App source code path
           skip_api_build: true
           output_location: 'build' # Built app content directory - optional
+        env:
+          REACT_APP_ENV_NAME: prod
+          REACT_APP_GA_KEY: ${{ vars.GOOGLE_ANALYTICS_KEY }}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
