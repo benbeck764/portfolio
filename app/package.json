@@ -1,9 +1,9 @@
 {
   "name": "portfolio-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "dependencies": {
-    "@benbeck764/react-components": "^1.0.46",
+    "@benbeck764/react-components": "^1.0.48",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.9",

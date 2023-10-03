@@ -13,3 +13,4 @@
 .env.production.local
 
 .npmrc
+yarn-error.log

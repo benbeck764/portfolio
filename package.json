@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "private": true,
   "repository": {
     "type": "git",
@@ -11,10 +11,6 @@
   },
   "homepage": "https://github.com/benbeck764/portfolio#readme",
   "scripts": {
-    "start:app": "cd app && yarn start",
-    "start:api": "cd api && yarn watch",
-    "start:proxy": "swa start http://localhost:3000 --api-location ./api --verbose",
-    "start": "swa start http://localhost:3000 --run 'cd app && yarn start' --api ./api --verbose",
-    "prestart": "cd app && open http://localhost:4280"
+    "start:app": "cd app && yarn start"
   }
 }
