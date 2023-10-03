@@ -147,7 +147,7 @@ export const NavigationDrawer: FC<NavigationDrawerProps> = (
                         </Box>
                         <Typography
                           key={index}
-                          variant="mobileParagraphBold"
+                          variant="paragraphBold"
                           sx={{
                             color: (theme) =>
                               config.disabled
@@ -172,7 +172,7 @@ export const NavigationDrawer: FC<NavigationDrawerProps> = (
                           onSelect={() => handleClick(option)}
                         >
                           <Typography
-                            variant="mobileParagraphBold"
+                            variant="paragraphBold"
                             sx={
                               option.disabled
                                 ? {

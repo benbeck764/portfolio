@@ -46,9 +46,7 @@ export const NavigationBar: FC<NavigationBarProps> = (props: NavigationBarProps)
                   },
                 },
                 disabled: config.disabled,
-                children: (
-                  <Typography variant="mobileParagraphBold">{config.label}</Typography>
-                ),
+                children: <Typography variant="paragraphBold">{config.label}</Typography>,
               }}
               popperSx={{ mt: '6px !important' }}
             >
@@ -112,7 +110,7 @@ export const NavigationBar: FC<NavigationBarProps> = (props: NavigationBarProps)
               {config.navigationRoute ? (
                 <StyledNavigationLink to={config.navigationRoute ?? ''}>
                   <StyledNavigationButton {...buttonProps} disabled={config.disabled}>
-                    <Typography variant="mobileParagraphBold">{config.label}</Typography>
+                    <Typography variant="paragraphBold">{config.label}</Typography>
                   </StyledNavigationButton>
                 </StyledNavigationLink>
               ) : (
@@ -121,7 +119,7 @@ export const NavigationBar: FC<NavigationBarProps> = (props: NavigationBarProps)
                   disabled={config.disabled}
                   onClick={() => props.onClickOption(config)}
                 >
-                  <Typography variant="mobileParagraphBold">{config.label}</Typography>
+                  <Typography variant="paragraphBold">{config.label}</Typography>
                 </StyledNavigationButton>
               )}
             </>

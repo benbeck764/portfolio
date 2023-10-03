@@ -160,34 +160,7 @@ export function getThemeBase(palette: PaletteOptions): ThemeOptions {
         lineHeight: 1,
         letterSpacing: -0.25,
       },
-      mobileParagraph: {
-        fontFamily: 'Roboto Mono, Sans-serif',
-        fontSize: 16,
-        fontWeight: 400,
-        lineHeight: 1,
-        letterSpacing: -0.75,
-      },
-      mobileParagraphBold: {
-        fontFamily: 'Roboto Mono, Sans-serif',
-        fontSize: 16,
-        fontWeight: 700,
-        lineHeight: 1,
-        letterSpacing: -0.5,
-      },
-      mobileParagraphSmall: {
-        fontFamily: 'Roboto Mono, Sans-serif',
-        fontSize: 14,
-        fontWeight: 400,
-        lineHeight: 1,
-        letterSpacing: -0.75,
-      },
-      mobileParagraphSmallBold: {
-        fontFamily: 'Roboto Mono, Sans-serif',
-        fontSize: 14,
-        fontWeight: 700,
-        lineHeight: 1,
-        letterSpacing: -0.5,
-      },
+
       iconSmall: {
         fontSize: 14,
         lineHeight: 1.3,
