@@ -1,4 +1,4 @@
-import { CssBaseline, StyledEngineProvider } from '@mui/material';
+import { CssBaseline } from '@mui/material';
 import { BrowserRouter as Router } from 'react-router-dom';
 import AppContent from './AppContent';
 import { getTheme } from './theme/theme';
@@ -8,14 +8,12 @@ const theme = getTheme();
 
 function App(): JSX.Element {
   return (
-    <StyledEngineProvider injectFirst>
-      <CustomThemeProvider theme={theme}>
-        <Router>
-          <CssBaseline />
-          <AppContent />
-        </Router>
-      </CustomThemeProvider>
-    </StyledEngineProvider>
+    <CustomThemeProvider theme={theme}>
+      <Router>
+        <CssBaseline />
+        <AppContent />
+      </Router>
+    </CustomThemeProvider>
   );
 }
 
