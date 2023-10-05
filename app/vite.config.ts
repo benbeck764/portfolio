@@ -8,6 +8,7 @@ export default defineConfig(({ mode }: { mode: string }) => {
   return {
     build: {
       rollupOptions: {},
+      chunkSizeWarningLimit: 1000,
     },
     define: {
       'process.env': env,
