@@ -1,6 +1,6 @@
 import { FC, useEffect } from 'react';
 import { Stack } from '@mui/material';
-import { BreakpointDevice, useBreakpoint } from '@benbeck764/react-components';
+import { BreakpointDevice, useBreakpoint } from '@benbeck764/react-components-common';
 import { useLocation } from 'react-router-dom';
 import { StyledPageWrapper } from '../../_shared';
 import Introduction from './components/Introduction/Introduction';

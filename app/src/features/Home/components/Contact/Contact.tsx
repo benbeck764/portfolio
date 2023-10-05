@@ -3,7 +3,7 @@ import { Box, Link, Stack, Typography } from '@mui/material';
 import CopyrightIcon from '@mui/icons-material/Copyright';
 import SectionHeader from '../_common/SectionHeader';
 import ContactLinks from '../_common/ContactLinks';
-import { useBreakpoint, BreakpointDevice } from '@benbeck764/react-components';
+import { useBreakpoint, BreakpointDevice } from '@benbeck764/react-components-common';
 
 const Contact: FC = () => {
   const { device } = useBreakpoint();
