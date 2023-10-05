@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Typography, Box } from '@mui/material';
-import { AppGridData, AppGridProps, AppGrid } from '@benbeck764/react-components';
+import { AppGridData, AppGridProps, AppGrid } from '@benbeck764/react-components-grid';
 import { createCardViewDefinitions } from './ProjectsGrid.card';
 import { Project } from '../../Work.config';
 

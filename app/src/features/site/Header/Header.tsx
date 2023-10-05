@@ -6,7 +6,7 @@ import {
 } from './Header.styles';
 import { Box, Grid, Slide, useScrollTrigger } from '@mui/material';
 import logo from '../../../assets/images/logo.png';
-import { useBreakpoint } from '@benbeck764/react-components';
+import { useBreakpoint } from '@benbeck764/react-components-common';
 import { Navigation } from './components/Navigation/Navigation';
 import { Link } from 'react-router-dom';
 import { AppRoutes, RouteName } from '../../../routing/common/routes';
