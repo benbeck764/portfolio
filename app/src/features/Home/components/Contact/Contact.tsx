@@ -3,8 +3,10 @@ import { Box, Link, Stack, Typography } from '@mui/material';
 import CopyrightIcon from '@mui/icons-material/Copyright';
 import SectionHeader from '../_common/SectionHeader';
 import ContactLinks from '../_common/ContactLinks';
+import { useBreakpoint, BreakpointDevice } from '@benbeck764/react-components-common';
 
 const Contact: FC = () => {
+  const { device } = useBreakpoint();
   return (
     <Box component="section" id="contact" width="100%" maxWidth={550}>
       <SectionHeader title="// Contact Me" />
@@ -43,13 +45,13 @@ const Contact: FC = () => {
               rel="noopener noreferrer"
             >
               <Typography variant="paragraphSmallBold" component="span">
-                Brittany Chiang
+                {device === BreakpointDevice.Mobile ? 'Brittany' : 'Brittany Chiang'}
               </Typography>
             </Link>{' '}
             &{' '}
             <Link href="https://tamalsen.dev/" target="_blank" rel="noopener noreferrer">
               <Typography variant="paragraphSmallBold" component="span">
-                Tamal Sen
+                {device === BreakpointDevice.Mobile ? 'Tamal' : 'Tamal Sen'}
               </Typography>
             </Link>
           </Typography>

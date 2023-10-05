@@ -1,6 +1,6 @@
 import { FC, Fragment, useState } from 'react';
 import { Box, Stack, Theme, Typography } from '@mui/material';
-import { Menu as MenuIcon } from '@mui/icons-material';
+import MenuIcon from '@mui/icons-material/Menu';
 import {
   NavMenuConfig,
   NavMenuOptions,
