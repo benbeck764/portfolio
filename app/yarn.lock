@@ -220,25 +220,26 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
-"@benbeck764/react-components-common@1.2.0":
-  version "1.2.0"
-  resolved "https://npm.pkg.github.com/download/@benbeck764/react-components-common/1.2.0/c52728d06c41202269db5778cafa65ccf805f60d#c52728d06c41202269db5778cafa65ccf805f60d"
-  integrity sha512-M+Max0oiFTucbna+hV5IM/W/P7MfS4gQ2X53/17lWiG0/8i9MA0oXoiCmnbobA/+EvAH3buSz4EoXES1n5cgKw==
+"@benbeck764/react-components-common@1.2.1":
+  version "1.2.1"
+  resolved "https://npm.pkg.github.com/download/@benbeck764/react-components-common/1.2.1/5d1ea62986e25b299b3928f75f872ec885ac2a86#5d1ea62986e25b299b3928f75f872ec885ac2a86"
+  integrity sha512-7l3XicQloYk+90s1mTN2SCDMzCbyOM71WxWEG6JeYLaNaxP9w6z4GtotMWlFZAKSw7oBYdYl1PQOLgDosbwxHA==
 
-"@benbeck764/react-components-grid@^1.2.0":
-  version "1.2.0"
-  resolved "https://npm.pkg.github.com/download/@benbeck764/react-components-grid/1.2.0/99b44bd77bd187b7f176d133483175e68f8fedcf#99b44bd77bd187b7f176d133483175e68f8fedcf"
-  integrity sha512-jP762JsqqJCux2cKiSmdkpZxgaCzut2KmY4NuiSWppi+nSnIgS3ilgALtPLR3myuKWc3z9yH7wd3t+DKqNs1Xg==
+"@benbeck764/react-components-grid@^1.2.1":
+  version "1.2.1"
+  resolved "https://npm.pkg.github.com/download/@benbeck764/react-components-grid/1.2.1/a884a1f546ae36004d31ed515db68313e8282094#a884a1f546ae36004d31ed515db68313e8282094"
+  integrity sha512-krmSGWeSy0LUe2FGhMqGTmG1NehBcQ+TF7KmpxcSSqNwIA3yH4ijb/HupAjJ6yXePUXEBK+z2ocwspbh+Bv9OQ==
   dependencies:
-    "@benbeck764/react-components" "1.2.0"
-    "@benbeck764/react-components-common" "1.2.0"
+    "@benbeck764/react-components" "1.2.1"
+    "@benbeck764/react-components-common" "1.2.1"
+    react-virtuoso "^4.6.0"
 
-"@benbeck764/react-components@1.2.0", "@benbeck764/react-components@^1.2.0":
-  version "1.2.0"
-  resolved "https://npm.pkg.github.com/download/@benbeck764/react-components/1.2.0/2cc3767fb832bad5ae619c3a3d7e91248c219f5d#2cc3767fb832bad5ae619c3a3d7e91248c219f5d"
-  integrity sha512-+hgcpvXh8O5h/r4VFbFX2GkiSn7Ow7P53Bf899FuVws53LLgoM9kjRQIgmqXYHZnpisNQJlKGRH9Dyffa9phhg==
+"@benbeck764/react-components@1.2.1", "@benbeck764/react-components@^1.2.1":
+  version "1.2.1"
+  resolved "https://npm.pkg.github.com/download/@benbeck764/react-components/1.2.1/56164910fc34eeb96e23d4305bf0f8074501ac55#56164910fc34eeb96e23d4305bf0f8074501ac55"
+  integrity sha512-LCHe7C7dBse1uSLoSQi4IeFD3jSIIGoeMxPIUvOr7iBwvSq46d52UyXVITq1PwDEbK9x6froESIgYceWY24+Wg==
   dependencies:
-    "@benbeck764/react-components-common" "1.2.0"
+    "@benbeck764/react-components-common" "1.2.1"
 
 "@emotion/babel-plugin@^11.11.0":
   version "11.11.0"
@@ -1975,6 +1976,11 @@ react-transition-group@^4.4.5:
     dom-helpers "^5.0.1"
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
+
+react-virtuoso@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/react-virtuoso/-/react-virtuoso-4.6.0.tgz#402d86363b6fc6408273615bae9be83e4ce73037"
+  integrity sha512-paQbkLA8U6dRe9srltWgPeoFCtNKqUYIcOpUR01JyznzaXWVzgZQE0M9KGi9vMoq8vHvHkGzuxJ6jDCS6uzePg==
 
 react@^18.2.0:
   version "18.2.0"

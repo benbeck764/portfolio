@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@benbeck764/react-components": "^1.2.0",
-    "@benbeck764/react-components-grid": "^1.2.0",
+    "@benbeck764/react-components": "^1.2.1",
+    "@benbeck764/react-components-grid": "^1.2.1",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.9",
