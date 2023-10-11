@@ -74,7 +74,7 @@ export const getPalette = (): PaletteOptions => {
       secondary: '#FFFFFF',
     },
     success: {
-      main: '#00C853',
+      main: '#00662A',
       dark: '#1B8031',
     },
     error: {

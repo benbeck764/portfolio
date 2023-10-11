@@ -25,6 +25,7 @@ const ContactLinks: FC<ContactLinksProps> = (props: ContactLinksProps) => {
         href="https://github.com/benbeck764"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="View my GitHub profile"
       >
         <GitHubIcon
           sx={{
@@ -38,6 +39,7 @@ const ContactLinks: FC<ContactLinksProps> = (props: ContactLinksProps) => {
         href="https://www.linkedin.com/in/ngbenbeck"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="View my LinkedIn profile"
       >
         <LinkedInIcon
           sx={{
@@ -51,6 +53,7 @@ const ContactLinks: FC<ContactLinksProps> = (props: ContactLinksProps) => {
         href="mailto:ben.beck.764@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Send me an email"
       >
         <EmailIcon
           sx={{

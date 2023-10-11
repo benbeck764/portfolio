@@ -6,8 +6,11 @@ const Introduction: FC = () => {
     <Box component="section" id="home">
       <Box>
         <Typography
-          variant="h6"
-          sx={{ color: (theme) => theme.palette.custom.blue.const }}
+          variant="paragraphLarge"
+          sx={(theme) => ({
+            color: theme.palette.custom.blue.const,
+            ...theme.typography.h6,
+          })}
         >
           Hello, my name is
         </Typography>

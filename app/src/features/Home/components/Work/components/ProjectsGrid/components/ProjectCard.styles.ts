@@ -5,7 +5,12 @@ export const StyledCard = styled(Box)(({ theme }) => ({
   border: `1px solid ${theme.palette.coolGrey[700]}`,
   borderRadius: theme.shape.borderRadius,
   boxShadow: '0 9px 9px rgba(0,0,0,0.25)',
-  height: '300px',
+  [theme.breakpoints.up('sm')]: {
+    height: '320px',
+  },
+  [theme.breakpoints.up('md')]: {
+    height: '300px',
+  },
   '&:hover': {
     border: `1px solid ${theme.palette.coolGrey[600]}`,
   },
@@ -13,7 +18,7 @@ export const StyledCard = styled(Box)(({ theme }) => ({
 
 export const StyledComingSoonBadge = styled(Badge)(({ theme }: { theme: Theme }) => ({
   '& .MuiBadge-badge': {
-    backgroundColor: theme.palette.success.light,
+    backgroundColor: theme.palette.success.dark,
     borderRadius: '4px',
     border: 'none',
     paddingTop: '12px',

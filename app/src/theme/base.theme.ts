@@ -160,7 +160,6 @@ export function getThemeBase(palette: PaletteOptions): ThemeOptions {
         lineHeight: 1,
         letterSpacing: -0.25,
       },
-
       iconSmall: {
         fontSize: 14,
         lineHeight: 1.3,

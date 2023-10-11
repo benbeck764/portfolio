@@ -43,13 +43,19 @@ const Contact: FC = () => {
               href="https://v4.brittanychiang.com/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="View Brittany Chiang's Portfolio Website"
             >
               <Typography variant="paragraphSmallBold" component="span">
                 {device === BreakpointDevice.Mobile ? 'Brittany' : 'Brittany Chiang'}
               </Typography>
             </Link>{' '}
             &{' '}
-            <Link href="https://tamalsen.dev/" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://tamalsen.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Tamal Sen's Portfolio Website"
+            >
               <Typography variant="paragraphSmallBold" component="span">
                 {device === BreakpointDevice.Mobile ? 'Tamal' : 'Tamal Sen'}
               </Typography>

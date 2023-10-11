@@ -35,6 +35,7 @@ export const Header: FC = () => {
                     src={logo}
                     display="flex"
                     height={40}
+                    width={180}
                     sx={{
                       '&:hover': {
                         transition: 'all .25s ease-in-out',

@@ -72,6 +72,7 @@ const ProjectCard: FC<ProjectCardProps> = (props: ProjectCardProps) => {
                         href={project.gitHubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`View ${project.name} source code on GitHub`}
                       >
                         <GitHubIcon
                           sx={{ color: (theme) => theme.palette.custom.yellow.symbol }}
@@ -79,7 +80,12 @@ const ProjectCard: FC<ProjectCardProps> = (props: ProjectCardProps) => {
                       </Link>
                     )}
                     {project.url && (
-                      <Link href={project.url} target="_blank" rel="noopener noreferrer">
+                      <Link
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Read more about ${project.name} on external website`}
+                      >
                         <OpenInNewIcon
                           sx={{ color: (theme) => theme.palette.custom.yellow.symbol }}
                         />
@@ -96,17 +102,17 @@ const ProjectCard: FC<ProjectCardProps> = (props: ProjectCardProps) => {
                   {project.description}
                 </Typography>
               </Box>
-              <Stack direction="row" gap={0.5} flexWrap="wrap" mt={2} p={1}>
+              <Stack direction="row" gap={0.5} flexWrap="wrap" mt={2} p={2}>
                 {project.technologies.map((technology: string, index: number) => (
                   <Typography
                     key={index}
-                    variant="paragraphExtraSmall"
+                    variant="paragraphSmall"
                     sx={{ color: (theme: Theme) => theme.palette.custom.blue.variable }}
                   >
                     {technology}
                     <Typography
                       key={index}
-                      variant="paragraphExtraSmall"
+                      variant="paragraphSmall"
                       component="span"
                       sx={{ color: (theme: Theme) => theme.palette.common.white }}
                     >

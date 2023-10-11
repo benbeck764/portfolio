@@ -1,4 +1,4 @@
-import { Box, Link, List, Stack, Typography } from '@mui/material';
+import { Box, Link, List, Stack, Theme, Typography } from '@mui/material';
 import React, { FC, useEffect, useRef, useState } from 'react';
 import { toLocalDateStringShort } from '../../../../../../utilities';
 import {
@@ -11,7 +11,6 @@ import {
 } from './ExperienceInfo.styles';
 import ContractInfo from './ContractInfo';
 import InternshipInfo from './InternshipInfo';
-import TechnologyChip from './TechnologyChip';
 
 type Role = {
   title: string;
@@ -182,9 +181,23 @@ const ExperienceInfo: FC<ExperienceInfoProps> = (props: ExperienceInfoProps) => 
         </Box>
       )}
 
-      <Stack direction="row" gap={0.5} flexWrap="wrap" mt={1}>
+      <Stack direction="row" gap={0.5} flexWrap="wrap" mt={1} p={1}>
         {technologies.map((technology: string, index: number) => (
-          <TechnologyChip key={index} name={technology} />
+          <Typography
+            key={index}
+            variant="paragraphSmall"
+            sx={{ color: (theme: Theme) => theme.palette.custom.blue.variable }}
+          >
+            {technology}
+            <Typography
+              key={index}
+              variant="paragraphSmall"
+              component="span"
+              sx={{ color: (theme: Theme) => theme.palette.common.white }}
+            >
+              {index < technologies.length - 1 ? ' | ' : ''}
+            </Typography>
+          </Typography>
         ))}
       </Stack>
     </StyledExperienceInfoWrapper>
