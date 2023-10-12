@@ -1,9 +1,12 @@
 import { FC } from 'react';
-import { Box, Link, Stack, Typography } from '@mui/material';
 import CopyrightIcon from '@mui/icons-material/Copyright';
 import SectionHeader from '../_common/SectionHeader';
 import ContactLinks from '../_common/ContactLinks';
 import { useBreakpoint, BreakpointDevice } from '@benbeck764/react-components';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 
 const Contact: FC = () => {
   const { device } = useBreakpoint();

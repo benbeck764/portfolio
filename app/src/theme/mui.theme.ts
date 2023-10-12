@@ -1,4 +1,4 @@
-import { Theme, ThemeOptions } from '@mui/material';
+import { Theme, ThemeOptions } from '@mui/material/styles';
 
 export const getMUITheme = (themeBaseOptions: ThemeOptions): ThemeOptions => {
   const themeBase = themeBaseOptions as Theme;

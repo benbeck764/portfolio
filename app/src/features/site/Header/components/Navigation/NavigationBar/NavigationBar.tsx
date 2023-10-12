@@ -1,5 +1,4 @@
 import { FC, Fragment } from 'react';
-import { Grid, Typography, ButtonProps, Theme } from '@mui/material';
 import {
   NavMenuConfig,
   NavMenuOptions,
@@ -11,6 +10,10 @@ import {
   StyledNavigationLink,
 } from './NavigationBar.styles';
 import { AppMenu, AppMenuItem } from '@benbeck764/react-components';
+import Typography from '@mui/material/Typography';
+import { Theme } from '@mui/material/styles';
+import Grid from '@mui/material/Grid';
+import { ButtonProps } from '@mui/material/Button';
 
 type NavigationBarProps = {
   navigationConfig: NavMenuConfig[];

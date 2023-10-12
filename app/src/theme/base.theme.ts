@@ -3,7 +3,7 @@ import {
   BreakpointsOptions,
   PaletteOptions,
   ThemeOptions,
-} from '@mui/material';
+} from '@mui/material/styles';
 
 const breakPointsOptions: BreakpointsOptions = {
   values: {

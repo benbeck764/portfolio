@@ -1,4 +1,6 @@
-import { styled, Box, Badge, Theme } from '@mui/material';
+import Badge from '@mui/material/Badge';
+import Box from '@mui/material/Box';
+import { styled, Theme } from '@mui/material/styles';
 
 export const StyledCard = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.coolGrey[900],

@@ -1,4 +1,5 @@
-import { styled, Theme, Stack } from '@mui/material';
+import Stack from '@mui/material/Stack';
+import { styled, Theme } from '@mui/material/styles';
 
 export const StyledPageWrapper = styled(Stack)(({ theme }: { theme: Theme }) => ({
   [theme.breakpoints.up('xs')]: {

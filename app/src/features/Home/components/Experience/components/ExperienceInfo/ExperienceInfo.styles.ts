@@ -1,4 +1,6 @@
-import { styled, Theme, Box, ListItem } from '@mui/material';
+import Box from '@mui/material/Box';
+import ListItem from '@mui/material/ListItem';
+import { styled, Theme } from '@mui/material/styles';
 
 export const StyledExperienceInfoWrapper = styled(Box)(({ theme }: { theme: Theme }) => ({
   [theme.breakpoints.up('xs')]: {

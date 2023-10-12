@@ -1,6 +1,10 @@
 import { FC } from 'react';
-import { Box, Typography, Link, Theme, Stack } from '@mui/material';
 import SectionHeader from '../_common/SectionHeader';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+import { Theme } from '@mui/material/styles';
+import Link from '@mui/material/Link';
 
 const About: FC = () => {
   return (

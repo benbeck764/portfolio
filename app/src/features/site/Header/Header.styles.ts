@@ -1,4 +1,6 @@
-import { styled, Theme, Box, Toolbar, AppBar } from '@mui/material';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import { styled, Theme } from '@mui/material/styles';
 
 export const StyledHeaderContainer = styled(Box)(({ theme }: { theme: Theme }) => ({
   [theme.breakpoints.up('xs')]: {

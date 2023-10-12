@@ -1,8 +1,8 @@
-import { CssBaseline } from '@mui/material';
 import { BrowserRouter as Router } from 'react-router-dom';
 import AppContent from './AppContent';
 import { getTheme } from './theme/theme';
 import { CustomThemeProvider } from '@benbeck764/react-components';
+import CssBaseline from '@mui/material/CssBaseline';
 
 const theme = getTheme();
 

@@ -1,5 +1,6 @@
+import Typography from '@mui/material/Typography';
+import { Theme } from '@mui/material/styles';
 import { FC } from 'react';
-import { Typography, Theme } from '@mui/material';
 
 type SectionHeaderProps = {
   title: string;

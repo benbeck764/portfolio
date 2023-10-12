@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Box } from '@mui/material';
+import Box from '@mui/material/Box';
 import SectionHeader from '../_common/SectionHeader';
 import ProjectsGrid from './components/ProjectsGrid/ProjectsGrid';
 import { projects } from './Work.config';

@@ -1,5 +1,4 @@
 import { FC, Fragment, useState } from 'react';
-import { Box, Stack, Theme, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import {
   NavMenuConfig,
@@ -14,6 +13,10 @@ import {
   CloseButton,
 } from '@benbeck764/react-components';
 import ContactLinks from '../../../../../Home/components/_common/ContactLinks';
+import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import { Theme } from '@mui/material/styles';
 
 interface NavigationDrawerProps {
   navigationConfig: NavMenuConfig[];

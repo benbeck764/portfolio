@@ -1,8 +1,9 @@
 import { FC } from 'react';
-import { Typography, Box } from '@mui/material';
+import Box from '@mui/material/Box';
 import { AppGridData, AppGridProps, AppGrid } from '@benbeck764/react-components-grid';
 import { createCardViewDefinitions } from './ProjectsGrid.card';
 import { Project } from '../../Work.config';
+import Typography from '@mui/material/Typography';
 
 type ProjectsGridProps = {
   projects: Project[];
@@ -29,9 +30,6 @@ const ProjectsGrid: FC<ProjectsGridProps> = (props: ProjectsGridProps) => {
     data: gridData,
     cardView: createCardViewDefinitions(),
     displayMode: 'card',
-    //cursorStyle: 'pointer',
-
-    //onItemClicked: onPoemSelected,
     noItemsMessage: <Typography variant="paragraph">No projects found.</Typography>,
   };
   return (

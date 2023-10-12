@@ -4,12 +4,15 @@ import {
   StyledHeaderContainer,
   StyledHeaderWrapper,
 } from './Header.styles';
-import { Box, Grid, Slide, useScrollTrigger } from '@mui/material';
 import logo from '../../../assets/images/logo.png';
 import { useBreakpoint } from '@benbeck764/react-components';
 import { Navigation } from './components/Navigation/Navigation';
 import { Link } from 'react-router-dom';
 import { AppRoutes, RouteName } from '../../../routing/common/routes';
+import Slide from '@mui/material/Slide';
+import Grid from '@mui/material/Grid';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+import Box from '@mui/material/Box';
 
 export const Header: FC = () => {
   const { breakpoint } = useBreakpoint();

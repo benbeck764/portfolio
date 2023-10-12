@@ -1,5 +1,6 @@
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import { FC } from 'react';
-import { Box, Typography } from '@mui/material';
 
 const Introduction: FC = () => {
   return (

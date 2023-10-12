@@ -1,4 +1,3 @@
-import { Box, Link, List, Stack, Theme, Typography } from '@mui/material';
 import React, { FC, useEffect, useRef, useState } from 'react';
 import { toLocalDateStringShort } from '../../../../../../utilities';
 import {
@@ -11,6 +10,11 @@ import {
 } from './ExperienceInfo.styles';
 import ContractInfo from './ContractInfo';
 import InternshipInfo from './InternshipInfo';
+import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
+import Box from '@mui/material/Box';
+import List from '@mui/material/List';
+import Stack from '@mui/material/Stack';
 
 type Role = {
   title: string;
