@@ -11,9 +11,10 @@ import Contact from './components/Contact/Contact';
 
 const Home: FC = () => {
   const { device } = useBreakpoint();
-  const { hash } = useLocation();
+  const location = useLocation();
 
   useEffect(() => {
+    const { hash } = location;
     if (hash) {
       const element = document.getElementById(hash.slice(1));
       if (element) {
@@ -24,10 +25,10 @@ const Home: FC = () => {
         });
       }
     }
-  }, [hash]);
+  }, [location]);
 
   return (
-    <StyledPageWrapper direction="column" gap={25}>
+    <StyledPageWrapper direction="column" gap={15}>
       <Introduction />
       <About />
       <Stack
