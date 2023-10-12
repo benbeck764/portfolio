@@ -15,6 +15,7 @@ import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import Stack from '@mui/material/Stack';
+import { Theme } from '@mui/material/styles';
 
 type Role = {
   title: string;
