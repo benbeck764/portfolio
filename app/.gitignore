@@ -14,5 +14,10 @@ stats.html
 .env.local
 .env.production.local
 
+# package manager
 .npmrc
 yarn-error.log
+
+#next 
+.next
+next-env.d.ts

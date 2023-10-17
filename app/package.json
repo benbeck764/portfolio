@@ -2,7 +2,6 @@
   "name": "portfolio-app",
   "version": "1.0.1",
   "private": true,
-  "type": "module",
   "dependencies": {
     "@benbeck764/react-components": "^1.4.0-beta.10",
     "@benbeck764/react-components-grid": "^1.4.0-beta.10",
@@ -11,10 +10,10 @@
     "@mui/icons-material": "^5.14.12",
     "@mui/material": "^5.14.12",
     "framer-motion": "^10.16.4",
+    "next": "^13.5.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-ga4": "^2.0.0",
-    "react-router-dom": "^6.16.0"
+    "react-ga4": "^2.0.0"
   },
   "devDependencies": {
     "@types/node": "^16.7.13",
@@ -23,21 +22,19 @@
     "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
-    "@vitejs/plugin-react": "^4.0.3",
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "rimraf": "^5.0.1",
-    "rollup-plugin-visualizer": "^5.9.2",
-    "typescript": "^5.2.2",
-    "vite": "^4.4.5"
+    "typescript": "^5.2.2"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "clean": "rimraf node_modules"
+    "clean": "rimraf node_modules",
+    "clean:cache": "rimraf .next"
   },
   "browserslist": {
     "production": [
