@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import { SxProps, Theme } from '@mui/material/styles';
 import {
-  motion,
+  m,
   useInView,
   useAnimation,
   Variants,
@@ -41,14 +41,14 @@ const FramerAnimation: FC<PropsWithChildren<AnimationProps>> = (
 
   return (
     <Box ref={ref} sx={containerSx}>
-      <motion.div
+      <m.div
         variants={variants}
         initial={initial}
         animate={animate || controls}
         transition={transition}
       >
         {children}
-      </motion.div>
+      </m.div>
     </Box>
   );
 };

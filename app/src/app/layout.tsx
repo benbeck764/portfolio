@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { LazyMotion, domAnimation } from 'framer-motion';
 import ThemeRegistry from '@/theme/ThemeRegistry';
 import AppContent from './AppContent';
 
@@ -29,9 +28,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang="en">
       <body>
         <ThemeRegistry>
-          {/* <LazyMotion features={domAnimation} strict>
-            <AppContent>{children}</AppContent>
-          </LazyMotion> */}
           <AppContent>{children}</AppContent>
         </ThemeRegistry>
       </body>
