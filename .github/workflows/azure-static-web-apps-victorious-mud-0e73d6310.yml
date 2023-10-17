@@ -33,11 +33,12 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
           action: 'upload'
           app_location: 'app' # App source code path
-          skip_api_build: true
-          output_location: 'dist' # Built app content directory - optional
+          api_location: '' # Api source code path - optional
+          output_location: '' # Built app content directory - optional
         env:
-          REACT_APP_ENV_NAME: prod
-          REACT_APP_GA_KEY: ${{ vars.GOOGLE_ANALYTICS_KEY }}
+          IS_STATIC_EXPORT: true
+          NEXT_PUBLIC_ENV_NAME: prod
+          NEXT_PUBLIC_GA_KEY: ${{ vars.GOOGLE_ANALYTICS_KEY }}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'

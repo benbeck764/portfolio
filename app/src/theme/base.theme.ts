@@ -4,6 +4,21 @@ import {
   PaletteOptions,
   ThemeOptions,
 } from '@mui/material/styles';
+import { Poppins, Roboto_Mono } from 'next/font/google';
+
+const poppins = Poppins({
+  weight: '400',
+  style: ['normal'],
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const robotoMono = Roboto_Mono({
+  weight: '400',
+  style: ['normal'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 const breakPointsOptions: BreakpointsOptions = {
   values: {
@@ -53,11 +68,11 @@ export function getThemeBase(palette: PaletteOptions): ThemeOptions {
     spacing,
     palette: palette,
     typography: {
-      fontFamily: 'Roboto Mono, Poppins, -apple-system, system-ui, sans-serif',
+      fontFamily: poppins.style.fontFamily,
       fontWeightLight: 400,
       fontSize: 14,
       h1: {
-        fontFamily: 'Poppins, Sans-serif',
+        fontFamily: robotoMono.style.fontFamily,
         fontSize: 'clamp(56px, 10vw, 96px)',
         fontWeight: 600,
         lineHeight: 1.1,
@@ -65,7 +80,7 @@ export function getThemeBase(palette: PaletteOptions): ThemeOptions {
         wordSpacing: '-0.05em',
       },
       h2: {
-        fontFamily: 'Poppins, Sans-serif',
+        fontFamily: robotoMono.style.fontFamily,
         fontSize: 'clamp(46px, 8vw, 72px)',
         fontWeight: 600,
         lineHeight: 1.1,
@@ -73,7 +88,7 @@ export function getThemeBase(palette: PaletteOptions): ThemeOptions {
         wordSpacing: '-0.025em',
       },
       h3: {
-        fontFamily: 'Poppins, Sans-serif',
+        fontFamily: robotoMono.style.fontFamily,
         fontSize: 'clamp(30px, 7vw, 56px)',
         fontWeight: 600,
         lineHeight: 1.1,
@@ -81,7 +96,7 @@ export function getThemeBase(palette: PaletteOptions): ThemeOptions {
         wordSpacing: '-0.025em',
       },
       h4: {
-        fontFamily: 'Roboto Mono, Sans-serif',
+        fontFamily: poppins.style.fontFamily,
         fontSize: 'clamp(24px, 7vw, 36px)',
         fontWeight: 700,
         lineHeight: 1.1,
@@ -89,7 +104,7 @@ export function getThemeBase(palette: PaletteOptions): ThemeOptions {
         wordSpacing: '-0.25em',
       },
       h5: {
-        fontFamily: 'Roboto Mono, Sans-serif',
+        fontFamily: poppins.style.fontFamily,
         fontSize: 'clamp(20px, 6.6vw, 26px)',
         fontWeight: 700,
         lineHeight: 1.1,
@@ -97,7 +112,7 @@ export function getThemeBase(palette: PaletteOptions): ThemeOptions {
         wordSpacing: '-0.25em',
       },
       h6: {
-        fontFamily: 'Roboto Mono, Sans-serif',
+        fontFamily: poppins.style.fontFamily,
         fontSize: 'clamp(17px, 6vw, 22px)',
         fontWeight: 600,
         lineHeight: 1.1,
@@ -105,56 +120,56 @@ export function getThemeBase(palette: PaletteOptions): ThemeOptions {
         wordSpacing: '-0.25em',
       },
       paragraph: {
-        fontFamily: 'Roboto Mono, Sans-serif',
+        fontFamily: poppins.style.fontFamily,
         fontSize: 14,
         fontWeight: 400,
         lineHeight: 1.1,
         letterSpacing: -0.5,
       },
       paragraphBold: {
-        fontFamily: 'Roboto Mono, Sans-serif',
+        fontFamily: poppins.style.fontFamily,
         fontSize: 14,
         fontWeight: 700,
         lineHeight: 1,
         letterSpacing: -0.25,
       },
       paragraphLink: {
-        fontFamily: 'Roboto Mono, Sans-serif',
+        fontFamily: poppins.style.fontFamily,
         fontSize: 14,
         fontWeight: 700,
         lineHeight: 1,
         letterSpacing: -0.25,
       },
       paragraphLarge: {
-        fontFamily: 'Roboto Mono, Sans-serif',
+        fontFamily: poppins.style.fontFamily,
         fontSize: 18,
         fontWeight: 400,
         lineHeight: 1.2,
         letterSpacing: -0.75,
       },
       paragraphSmall: {
-        fontFamily: 'Roboto Mono, Sans-serif',
+        fontFamily: poppins.style.fontFamily,
         fontSize: 12,
         fontWeight: 400,
         lineHeight: 1,
         letterSpacing: -0.5,
       },
       paragraphSmallBold: {
-        fontFamily: 'Roboto Mono, Sans-serif',
+        fontFamily: poppins.style.fontFamily,
         fontSize: 12,
         fontWeight: 700,
         lineHeight: 1,
         letterSpacing: -0.25,
       },
       paragraphExtraSmall: {
-        fontFamily: 'Roboto Mono, Sans-serif',
+        fontFamily: poppins.style.fontFamily,
         fontSize: 11,
         fontWeight: 400,
         lineHeight: 1,
         letterSpacing: -0.5,
       },
       paragraphExtraSmallBold: {
-        fontFamily: 'Roboto Mono, Sans-serif',
+        fontFamily: poppins.style.fontFamily,
         fontSize: 11,
         fontWeight: 700,
         lineHeight: 1,
