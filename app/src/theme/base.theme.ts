@@ -19,11 +19,11 @@ const spacing = 8;
 const pageContentMargin = spacing * 2;
 
 const headerHeights = {
-  xs: 60,
-  sm: 60,
-  md: 60,
-  lg: 60,
-  xl: 60,
+  xs: 80,
+  sm: 80,
+  md: 80,
+  lg: 80,
+  xl: 80,
 };
 
 const pageWidths: { [key in Breakpoint]: number } = {

@@ -14,7 +14,6 @@ export const StyledExperienceInfoWrapper = styled(Box)(({ theme }: { theme: Them
   [theme.breakpoints.up('xl')]: {
     paddingLeft: '32px',
     paddingRight: '32px',
-    height: '415px',
   },
   maxWidth: '730px',
 }));

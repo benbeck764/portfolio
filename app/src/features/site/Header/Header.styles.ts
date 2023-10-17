@@ -56,7 +56,7 @@ export const StyledHeaderWrapper = styled(Toolbar)(({ theme }: { theme: Theme })
   [theme.breakpoints.up('xl')]: {
     paddingLeft: 24,
     paddingRight: 24,
-    paddingTop: 8,
-    paddingBottom: 8,
+    paddingTop: 24,
+    paddingBottom: 24,
   },
 }));

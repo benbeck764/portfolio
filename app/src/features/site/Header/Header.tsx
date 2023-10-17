@@ -50,20 +50,7 @@ export const Header: FC = () => {
               </Grid>
               <Grid
                 item
-                xs={4}
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-              >
-                {breakpoint === 'xl' && (
-                  <Box ml={4}>
-                    <Navigation variant="bar" />
-                  </Box>
-                )}
-              </Grid>
-              <Grid
-                item
-                xs={4}
+                xs={8}
                 display="flex"
                 alignItems="center"
                 justifyContent="flex-end"
@@ -71,6 +58,11 @@ export const Header: FC = () => {
                 {breakpoint !== 'xl' && (
                   <Box>
                     <Navigation variant="drawer" />
+                  </Box>
+                )}
+                {breakpoint === 'xl' && (
+                  <Box ml={4}>
+                    <Navigation variant="bar" />
                   </Box>
                 )}
               </Grid>
