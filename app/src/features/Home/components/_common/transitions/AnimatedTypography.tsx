@@ -1,6 +1,6 @@
 import Typography, { TypographyProps } from '@mui/material/Typography';
 import { FC } from 'react';
-import Animation, { AnimationProps } from './Animation';
+import FramerAnimation, { AnimationProps } from './Animation';
 
 export type AnimatedTypographyProps = TypographyProps & AnimationProps;
 
@@ -17,7 +17,7 @@ const AnimatedTypography: FC<AnimatedTypographyProps> = (
     ...typographyProps
   } = props;
   return (
-    <Animation
+    <FramerAnimation
       variants={variants}
       inView={inView}
       initial={initial}
@@ -26,7 +26,7 @@ const AnimatedTypography: FC<AnimatedTypographyProps> = (
       containerSx={containerSx}
     >
       <Typography {...typographyProps} />
-    </Animation>
+    </FramerAnimation>
   );
 };
 

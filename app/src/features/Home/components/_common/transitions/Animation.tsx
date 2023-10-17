@@ -25,7 +25,7 @@ export type AnimationProps = {
   containerSx?: SxProps<Theme>;
 };
 
-const Animation: FC<PropsWithChildren<AnimationProps>> = (
+const FramerAnimation: FC<PropsWithChildren<AnimationProps>> = (
   props: PropsWithChildren<AnimationProps>
 ) => {
   const { children, variants, inView, initial, animate, transition, containerSx } = props;
@@ -53,4 +53,4 @@ const Animation: FC<PropsWithChildren<AnimationProps>> = (
   );
 };
 
-export default Animation;
+export default FramerAnimation;

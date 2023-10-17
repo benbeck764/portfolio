@@ -9,6 +9,7 @@ import Experience from './components/Experience/Experience';
 import Work from './components/Work/Work';
 import Contact from './components/Contact/Contact';
 import Box from '@mui/material/Box';
+import AnimatedSection from './components/_common/transitions/AnimatedSection';
 
 const Home: FC = () => {
   const { device } = useBreakpoint();
@@ -34,7 +35,9 @@ const Home: FC = () => {
         <Introduction />
       </StyledIntroWrapper>
       <Box py={12.5}>
-        <About />
+        <AnimatedSection>
+          <About />
+        </AnimatedSection>
       </Box>
       <Stack
         {...(device !== BreakpointDevice.Mobile && {
@@ -43,10 +46,14 @@ const Home: FC = () => {
         })}
         py={12.5}
       >
-        <Experience />
+        <AnimatedSection>
+          <Experience />
+        </AnimatedSection>
       </Stack>
       <Box py={12.5}>
-        <Work />
+        <AnimatedSection>
+          <Work />
+        </AnimatedSection>
       </Box>
       <Stack
         {...(device !== BreakpointDevice.Mobile && {
@@ -54,7 +61,9 @@ const Home: FC = () => {
           justifyContent: 'center',
         })}
       >
-        <Contact />
+        <AnimatedSection>
+          <Contact />
+        </AnimatedSection>
       </Stack>
     </StyledPageWrapper>
   );
