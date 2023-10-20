@@ -4,12 +4,12 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { StyledCard, StyledComingSoonBadge } from './ProjectCard.styles';
 import { useHovered } from '../../../../../../../utilities';
 import { Project } from '../../../Work.config';
-import { StyledEllipsingTextContainer } from '@benbeck764/react-components';
 import { Theme, useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
+import { StyledEllipsingTextContainer } from '@benbeck764/react-components/common';
 
 type ProjectCardProps = {
   project: Project;

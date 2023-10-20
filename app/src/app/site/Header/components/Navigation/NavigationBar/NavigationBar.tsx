@@ -9,11 +9,11 @@ import {
   StyledNavigationButton,
   StyledNavigationLink,
 } from './NavigationBar.styles';
-import { AppMenu, AppMenuItem } from '@benbeck764/react-components';
 import Typography from '@mui/material/Typography';
 import { Theme } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import { ButtonProps } from '@mui/material/Button';
+import AppMenu, { AppMenuItem } from '@benbeck764/react-components/Menu';
 
 type NavigationBarProps = {
   navigationConfig: NavMenuConfig[];

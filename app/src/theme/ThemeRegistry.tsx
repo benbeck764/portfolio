@@ -1,6 +1,6 @@
 'use client';
 import * as React from 'react';
-import { CustomThemeProvider } from '@benbeck764/react-components';
+import CustomThemeProvider from '@benbeck764/react-components/theme';
 import CssBaseline from '@mui/material/CssBaseline';
 import NextAppDirEmotionCacheProvider from './EmotionCache';
 import { getTheme } from './theme';

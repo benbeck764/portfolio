@@ -3,8 +3,8 @@
   "version": "1.0.1",
   "private": true,
   "dependencies": {
-    "@benbeck764/react-components": "^1.4.0-beta.10",
-    "@benbeck764/react-components-grid": "^1.4.0-beta.10",
+    "@benbeck764/react-components": "^1.4.0-beta.17",
+    "@benbeck764/react-components-grid": "^1.4.0-beta.17",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.12",
@@ -16,12 +16,14 @@
     "react-ga4": "^2.0.0"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^13.5.5",
     "@types/node": "^16.7.13",
     "@types/react": "^18.2.22",
     "@types/react-dom": "^18.2.7",
     "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
+    "cross-env": "^7.0.3",
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
@@ -32,6 +34,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "analyze": "cross-env ANALYZE=true && yarn build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "clean": "rimraf node_modules",
     "clean:cache": "rimraf .next"

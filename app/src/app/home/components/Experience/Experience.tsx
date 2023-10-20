@@ -1,9 +1,10 @@
 import { FC, useEffect, useState } from 'react';
 import { experienceTabs } from './Experience.config';
 import SectionHeader from '../_common/SectionHeader';
-import { AppTabs, useBreakpoint, BreakpointDevice } from '@benbeck764/react-components';
 import Box from '@mui/material/Box';
 import { Theme } from '@mui/material/styles';
+import AppTabs from '@benbeck764/react-components/Tabs';
+import { BreakpointDevice, useBreakpoint } from '@benbeck764/react-components';
 
 const Experience: FC = () => {
   const { device } = useBreakpoint();
