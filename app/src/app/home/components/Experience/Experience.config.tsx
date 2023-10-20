@@ -1,4 +1,4 @@
-import { TabItem } from '@benbeck764/react-components';
+import { TabItem } from '@benbeck764/react-components/Tabs';
 import ExperienceInfo from './components/ExperienceInfo/ExperienceInfo';
 
 export const experienceTabs: TabItem[] = [

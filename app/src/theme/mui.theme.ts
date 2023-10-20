@@ -22,13 +22,6 @@ export const getMUITheme = (themeBaseOptions: ThemeOptions): ThemeOptions => {
               backgroundColor: 'transparent',
             },
           },
-          // Hide Chrome auto-fill color
-          input: {
-            '&:-webkit-autofill': {
-              WebkitBoxShadow: `0 0 0 100px ${themeBase.palette.common.white} inset`,
-              WebKitTextFillColor: `${themeBase.palette.common.white}`,
-            },
-          },
         },
       },
       MuiBackdrop: {

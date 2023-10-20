@@ -6,17 +6,15 @@ import {
   NavMenuOptions,
   NavigationOptionVariant,
 } from '../Navigation.props';
-import {
-  AppDrawer,
-  AppDropdown,
-  AppMenuItem,
-  CloseButton,
-} from '@benbeck764/react-components';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { Theme } from '@mui/material/styles';
 import ContactLinks from '@/app/home/components/_common/ContactLinks';
+import { CloseButton } from '@benbeck764/react-components/common';
+import AppDrawer from '@benbeck764/react-components/Drawer';
+import AppDropdown from '@benbeck764/react-components/Dropdown';
+import { AppMenuItem } from '@benbeck764/react-components/Menu';
 
 interface NavigationDrawerProps {
   navigationConfig: NavMenuConfig[];

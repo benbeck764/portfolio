@@ -29,45 +29,46 @@ const Home: FC = () => {
   }, [hash]);
 
   return (
-    <LazyMotion features={domAnimation} strict>
-      <StyledPageWrapper direction="column">
-        <StyledIntroWrapper alignItems="center" justifyContent="center">
-          <Introduction />
-        </StyledIntroWrapper>
-        <Box py={12.5}>
-          <AnimatedSection>
-            <About />
-          </AnimatedSection>
-        </Box>
-        <Stack
-          sx={{
-            alignItems: { xs: 'initial', lg: 'center' },
-            justifyContent: { xs: 'initial', lg: 'center' },
-          }}
-          py={12.5}
-        >
-          <AnimatedSection>
-            <Experience />
-          </AnimatedSection>
-        </Stack>
-        <Box py={12.5}>
-          <AnimatedSection>
-            <Work />
-          </AnimatedSection>
-        </Box>
-        <Stack
-          sx={{
-            alignItems: { xs: 'initial', lg: 'center' },
-            justifyContent: { xs: 'initial', lg: 'center' },
-          }}
-          py={12.5}
-        >
-          <AnimatedSection>
-            <Contact />
-          </AnimatedSection>
-        </Stack>
-      </StyledPageWrapper>
-    </LazyMotion>
+    // <LazyMotion features={domAnimation} strict>
+    //   <StyledPageWrapper direction="column">
+    //     <StyledIntroWrapper alignItems="center" justifyContent="center">
+    //       <Introduction />
+    //     </StyledIntroWrapper>
+    //     <Box py={12.5}>
+    //       <AnimatedSection>
+    //         <About />
+    //       </AnimatedSection>
+    //     </Box>
+    //     <Stack
+    //       sx={{
+    //         alignItems: { xs: 'initial', lg: 'center' },
+    //         justifyContent: { xs: 'initial', lg: 'center' },
+    //       }}
+    //       py={12.5}
+    //     >
+    //       <AnimatedSection>
+    //         <Experience />
+    //       </AnimatedSection>
+    //     </Stack>
+    //     <Box py={12.5}>
+    //       <AnimatedSection>
+    //         <Work />
+    //       </AnimatedSection>
+    //     </Box>
+    //     <Stack
+    //       sx={{
+    //         alignItems: { xs: 'initial', lg: 'center' },
+    //         justifyContent: { xs: 'initial', lg: 'center' },
+    //       }}
+    //       py={12.5}
+    //     >
+    //       <AnimatedSection>
+    //         <Contact />
+    //       </AnimatedSection>
+    //     </Stack>
+    //   </StyledPageWrapper>
+    // </LazyMotion>
+    <></>
   );
 };
 
