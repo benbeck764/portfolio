@@ -11,9 +11,11 @@ import Box from '@mui/material/Box';
 import AnimatedSection from './components/_common/transitions/AnimatedSection';
 import useHash from '@/utilities/hooks/useHash';
 import { LazyMotion, domAnimation } from 'framer-motion';
+import { usePageViewTracking } from '@/utilities/google-analytics';
 
 const Home: FC = () => {
   const hash = useHash();
+  usePageViewTracking();
 
   useEffect(() => {
     if (hash) {

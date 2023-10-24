@@ -9,6 +9,7 @@ import { Header } from './site/Header/Header';
 
 const AppContent: FC<PropsWithChildren> = (props: PropsWithChildren) => {
   const { children } = props;
+
   return (
     <Stack>
       <StyledStickyHeaderContainer>
