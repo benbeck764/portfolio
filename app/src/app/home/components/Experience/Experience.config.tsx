@@ -3,6 +3,24 @@ import ExperienceInfo from './components/ExperienceInfo/ExperienceInfo';
 
 export const experienceTabs: TabItem[] = [
   {
+    label: 'True Anomaly',
+    children: (
+      <ExperienceInfo
+        roles={[
+          {
+            title: 'Senior Software Engineer',
+            accomplishments: ['Defining the next generation of space security!'],
+            startDate: new Date(2023, 11),
+          },
+        ]}
+        companyName="True Anomaly"
+        companyUrl="https://www.trueanomaly.space"
+        //technologies={['TypeScript', 'React', 'D3.js']}
+        technologies={[]}
+      />
+    ),
+  },
+  {
     label: 'BenBeck.dev',
     children: (
       <ExperienceInfo
@@ -16,6 +34,7 @@ export const experienceTabs: TabItem[] = [
               'Established a robust ecosystem of nearly a dozen Power BI apps, empowering users with comprehensive data visualization and analysis capabilities.',
             ],
             startDate: new Date(2021, 0),
+            endDate: new Date(2023, 11),
           },
         ]}
         companyName="BenBeck.dev"
