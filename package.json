@@ -11,6 +11,6 @@
   },
   "homepage": "https://github.com/benbeck764/portfolio#readme",
   "scripts": {
-    "start:app": "cd app && yarn dev"
+    "start:app": "cd app && pnpm dev"
   }
 }

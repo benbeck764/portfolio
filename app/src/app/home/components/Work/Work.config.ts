@@ -23,24 +23,7 @@ export const projects: Project[] = [
     gitHubUrl: 'https://github.com/benbeck764/react-components',
     technologies: ['React', 'TypeScript', 'MUI', 'Storybook', 'Emotion'],
   },
-  {
-    name: 'Bebop Poetry',
-    description: `A completely custom poetry app designed for my dad's poetry. 
-    The app is planned to be released in early 2024 with a basic subscription model allowing users to subscribe to the entire poetry library.`,
-    technologies: [
-      'React',
-      'TypeScript',
-      'Node.js',
-      'typeorm',
-      'SQL Server',
-      'MUI',
-      'Auth0',
-      'Stripe',
-      'Azure',
-    ],
-    comingSoon: true,
-  },
-  {
+   {
     name: 'PowerBI.Tips Tools',
     description: `Tools designed to unlock your creativity and provide a comfortable and simplistic way to generate a Power BI theme.
     Users are able to view a theme gallery, generate wireframes and color palettes and modify hundreds of theme properties!`,

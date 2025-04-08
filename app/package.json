@@ -34,7 +34,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "analyze": "cross-env ANALYZE=true && yarn build",
+    "analyze": "cross-env ANALYZE=true && pnpm build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "clean": "rimraf node_modules",
     "clean:cache": "rimraf .next"

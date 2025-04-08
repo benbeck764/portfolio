@@ -8,15 +8,20 @@ export const experienceTabs: TabItem[] = [
       <ExperienceInfo
         roles={[
           {
-            title: 'Senior Software Engineer',
+            title: 'Staff Software Engineer',
             accomplishments: ['Defining the next generation of space security!'],
+            startDate: new Date(2025, 1),
+          },
+          {
+            title: 'Senior Software Engineer',
+            accomplishments: [],
             startDate: new Date(2023, 11),
+            endDate: new Date(2025, 1),
           },
         ]}
         companyName="True Anomaly"
         companyUrl="https://www.trueanomaly.space"
-        //technologies={['TypeScript', 'React', 'D3.js']}
-        technologies={[]}
+        technologies={['TypeScript', 'React', 'D3.js']}
       />
     ),
   },
