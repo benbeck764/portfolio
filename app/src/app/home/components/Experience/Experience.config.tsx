@@ -7,10 +7,16 @@ export const experienceTabs: TabItem[] = [
     children: (
       <ExperienceInfo
         roles={[
+           {
+            title: 'Principal Software Engineer',
+            accomplishments: ['Spearheading the architectural design and development of the next-generation user interface for the Mosaic Software Platform, a React (TypeScript) based command & control/mission planning software platform.'],
+            startDate: new Date(2025, 7),
+          },
           {
             title: 'Staff Software Engineer',
-            accomplishments: ['Defining the next generation of space security!'],
+            accomplishments: [],
             startDate: new Date(2025, 1),
+            endDate: new Date(2025, 7)
           },
           {
             title: 'Senior Software Engineer',
@@ -21,7 +27,7 @@ export const experienceTabs: TabItem[] = [
         ]}
         companyName="True Anomaly"
         companyUrl="https://www.trueanomaly.space"
-        technologies={['TypeScript', 'React', 'D3.js']}
+        technologies={['TypeScript', 'React', 'Jotai', 'D3.js', 'three.js']}
       />
     ),
   },

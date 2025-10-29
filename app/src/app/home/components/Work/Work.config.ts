@@ -10,18 +10,17 @@ export type Project = {
 export const projects: Project[] = [
   {
     name: 'BenBeck.dev',
-    description: `This is where you are right now - my first portfolio website, 
-    built in 2023! This app is a continued work in progress, as I learn new skills, I will attempt to apply them to this website.`,
+    description: `This is where you are right now! This app is a continued work in progress, as I learn new skills, I will attempt to apply them to this website.`,
     url: 'https://benbeck.dev',
     gitHubUrl: 'https://github.com/benbeck764/portfolio',
-    technologies: ['React', 'TypeScript', 'MUI', 'Azure'],
+    technologies: ['React', 'Next.js', 'TypeScript', 'MUI', 'Azure'],
   },
   {
     name: 'React Components Library',
     description: `A React library featuring a collection of custom and abstracted MUI components along with a base theme which can be overriden. 
     These are the very components this app is built upon.`,
     gitHubUrl: 'https://github.com/benbeck764/react-components',
-    technologies: ['React', 'TypeScript', 'MUI', 'Storybook', 'Emotion'],
+    technologies: ['React', 'TypeScript', 'MUI', 'Storybook'],
   },
    {
     name: 'PowerBI.Tips Tools',
